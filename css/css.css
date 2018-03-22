@@ -1,0 +1,8 @@
+.escopo{
+    margin: 10%;
+    margin-bottom: 1px ;
+}
+#zoom:hover{
+    -ms-transform: scale(4); /* IE 9 */
+    transform: scale(4); 
+}
