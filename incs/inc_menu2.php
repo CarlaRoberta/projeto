@@ -7,16 +7,13 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="img/icone.jpg">
-<!--        <title>Projeto</title>
+        <title>Projeto</title>
         <link href="css/css.css" rel="stylesheet" type="text/css"/>
-         Bootstrap core CSS 
-        <link href="css/bood.css" rel="stylesheet" type="text/css"/>-->
-        <!-- Custom styles for this template -->
-<!--        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>  -->
-        <link href="../css/carousel.css" rel="stylesheet" type="text/css"/>
-        <link href="../dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <script src="../assets/js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
-        <script src="../assets/js/ie-emulation-modes-warning.js" type="text/javascript"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>  
+        <link href="css/carousel.css" rel="stylesheet" type="text/css"/>
+        <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="assets/js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
+        <script src="assets/js/ie-emulation-modes-warning.js" type="text/javascript"></script>
         <link href="carousel.css" rel="stylesheet">
     </head>
     <!-- NAVBAR
@@ -73,32 +70,35 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+                    <img class="first-slide" src="img/slide/lap.jpg" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Example headline.</h1>
-                            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                            <h1>Saiba sobre o Projeto Cild.a</h1>
+                            <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
+                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires, Carla Roberta</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Saiba mais</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+                    <img class="second-slide" src="img/slide/cal.jpg" alt="Second slide">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            <h1>Saiba sobre o Projeto Cild.a</h1>
+                            <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
+                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires, Carla Roberta</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Saiba mais</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+                    <img class="third-slide" src="img/slide/banner.png" alt="Third slide">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>One more for good measure.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                            <h1>Saiba sobre o Projeto Cild.a</h1>
+                            <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
+                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires, Carla Roberta</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Saiba mais</a></p>
                         </div>
                     </div>
                 </div>
@@ -112,6 +112,3 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-  <?php
-    require 'inc_rodape.php';
-    ?>
