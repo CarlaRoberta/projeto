@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+    <?php require 'incs/inc_menu2.php'; ?>
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-11 col-sm-offset-3 col-md-10 col-md-offset-2 main">           
+
+            <h2 class="sub-header">Lista de Funcionarios</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Sexo</th>
+                            <th>Setor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Lorem</td>
+                            <td>20</td>
+                            <td>femenino</td>
+                            <td>sit</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>amet</td>
+                            <td>19</td>
+                            <td>masculino</td>
+                            <td>elit</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>janaina</td>
+                            <td>38</td>
+                            <td>femenino</td>
+                            <td>sit</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>libero</td>
+                            <td>30</td>
+                            <td>masculino</td>
+                            <td>ante</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>lorena</td>
+                            <td>30</td>
+                            <td>femenino</td>
+                            <td>sit</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Nulla</td>
+                            <td>41</td>
+                            <td>femenino</td>
+                            <td>at</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Rosana</td>
+                            <td>20</td>
+                            <td>femenino</td>
+                            <td>sit</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>sagittis</td>
+                            <td>50</td>
+                            <td>masculino</td>
+                            <td>mauris</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Fusce</td>
+                            <td>25</td>
+                            <td>femenino</td>
+                            <td>sed</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>augue</td>
+                            <td>34</td>
+                            <td>masculino</td>
+                            <td>Mauris</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>gabriela</td>
+                            <td>38</td>
+                            <td>femenino</td>
+                            <td>arcu</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>eget</td>
+                            <td>28</td>
+                            <td>masculino</td>
+                            <td>aptent</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>taciti</td>
+                            <td>32</td>
+                            <td>femenino</td>
+                            <td>litora</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>torquent</td>
+                            <td>21</td>
+                            <td>masculino</td>
+                            <td>nostra</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>perciana</td>
+                            <td>19</td>
+                            <td>femenino</td>
+                            <td>Curabitur</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>sodales</td>
+                            <td>39</td>
+                            <td>masculino</td>
+                            <td>libero</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php require 'incs/inc_rodape.php'; ?>

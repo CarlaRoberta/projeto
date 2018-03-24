@@ -37,7 +37,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="index.php">Home</a></li>
                                 <li><a href="sobre.php">Sobre</a></li>
-                                <li><a href="#contact">Funcionarios</a></li>
+                                <li><a href="funcionarios.php">Funcionarios</a></li>                                
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -72,6 +72,7 @@
                     <img class="first-slide" src="img/slide/lap.jpg" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption">
+                            <a href="login.php"><button class="left btn "><span  class="glyphicon glyphicon-user" ></span></button></a>
                             <h1>Saiba sobre o Projeto Cild.a</h1>
                             <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
                                 Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires e Carla Roberta</p>
@@ -83,6 +84,7 @@
                     <img class="second-slide" src="img/slide/cal.jpg" alt="Second slide">
                     <div class="container">
                         <div class="carousel-caption">
+                            <a href="login.php"><button class="left btn "><span  class="glyphicon glyphicon-user" ></span></button></a>
                             <h1>Saiba sobre o Projeto Cild.a</h1>
                             <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
                                 Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires e Carla Roberta</p>
@@ -94,6 +96,7 @@
                     <img class="third-slide" src="img/slide/banner.png" alt="Third slide">
                     <div class="container">
                         <div class="carousel-caption">
+                            <a href="login.php"><button class="left btn "><span  class="glyphicon glyphicon-user" ></span></button></a>
                             <h1>Saiba sobre o Projeto Cild.a</h1>
                             <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
                                 Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires e Carla Roberta</p>

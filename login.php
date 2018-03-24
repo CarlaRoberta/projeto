@@ -17,7 +17,7 @@
     <body class="text-center">
         <form class="form-signin " action="verificar/verificar_login.php" method="POST">
             <img class="mb-4" src="img/cont.png" alt=""width="30%" height="30%" >
-            <h1 class="h3 mb-3 font-weight-normal">Bem Vindo ao ""</h1>
+            <h1 class="h3 mb-3 font-weight-normal">Bem Vindo ao CILD.A</h1>
             <label for="inputEmail" class="sr-only">Endereço de e-mail:</label>
             <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
             <label for="inputPassword" class="sr-only">Senha</label>

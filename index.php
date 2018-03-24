@@ -4,8 +4,6 @@
     <header>
         <?php require 'incs/inc_menu2.php'; ?>
     </header>
-
-
     <div class="escopo"> 
         <center>
             <div class="row">
@@ -28,12 +26,10 @@
                     <h2>Heading</h2>
                     <p></p>
                     <p><a class="btn btn-default" href="#" role="button">Ver detalhes &raquo;</a></p>
-                </div>
-               
+                </div>               
             </div>
         </center>   
     </div>
-
     <?php
     require 'incs/inc_rodape.php';
     ?>

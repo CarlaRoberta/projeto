@@ -7,6 +7,8 @@
         <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <link href="css/cover.css" rel="stylesheet">
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
+            <link href="css/dashboard.css" rel="stylesheet">
+
 
     </head>
 
@@ -22,18 +24,44 @@
                                 <ul class="nav masthead-nav">
                                     <li class="active"><a href="index.php">Home</a></li>
                                     <li><a href="sobre.php">Sobre</a></li>
-                                    <li><a href="#">Funcionarios</a></li>
+                                    <li><a href="funcionarios.php">Funcionarios</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                     <div class="inner cover">
                         <h1 class="cover-heading"> Cild.a</h1>
-                        <p class="lead">Cild.a é o nome escolhido pelo grupo composto por Carla Roberta, Isabella Moretti, Luana, Daniel e Anna. 
+                        <p class="lead">Cild.a é o nome escolhido pelo grupo composto por Carla Roberta, Isabella Moretti,
+                            Luana Neves, Daniel Ramires e Anna Ellen. <br>
                             O objetivo do grupo é criar um software capaz de fazer a contabilidade das empresas.</p>
                         <p class="lead">
                             <a href="index.php" class="btn btn-lg btn-default">Voltar a Pagina Principal</a>
                         </p>
+                    </div>
+                    <h1 class="page-header">Criadores</h1>
+
+                    <div class="row placeholders">
+                        <div class="col-xs-6 col-sm-2 placeholder">
+                            <img src= "img/criadores/ana.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>ANNA</h4>
+                        </div>
+                        <div class="col-xs-6 col-sm-2 placeholder">
+                            <img src="img/criadores/daniela.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>DANIELA</h4>
+                        </div>
+                        <div class="col-xs-6 col-sm-2 placeholder">
+                            <img src="img/criadores/luana.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>LUANA</h4>
+                        </div>
+                        <div class="col-xs-6 col-sm-2 placeholder">
+                            <img src="img/criadores/isabella.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>ISABELLA</h4>
+                        </div>
+                        <div class="col-xs-6 col-sm-2 placeholder">
+                            <img src="img/criadores/carla.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>CARLA</h4>
+                        </div>
+
                     </div>
                     <div class="mastfoot">
                         <div class="inner">
