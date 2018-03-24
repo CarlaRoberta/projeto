@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-lg-4">
                     <img class="img-circle" src="img/recisao.jpg" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Calculo de rescisão</h2>
+                    <h2>Calculo de Rescisão</h2>
                     <p>Calculo da anulação ou cancelamento do vínculo empregatício por algum motivo específico.</p>
                     <p><a class="btn btn-default" href="#" role="button">Ver detalhes &raquo;</a></p>
                 </div>

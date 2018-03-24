@@ -1,7 +1,7 @@
  <!-- FOOTER -->
       <footer class="container">
-          <p class="float-right"><a href="#">  <span style="font-size: 400%; color: palevioletred" class="glyphicon glyphicon-hand-up" aria-hidden="true"></span></a></p>
-        <p>&copy; 2018 Carla, Cont. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+          <p class="float-right"><a href="#">  <span style="font-size: 400%; color: #138496" class="glyphicon glyphicon-hand-up" aria-hidden="true"></span></a></p>
+        <p>&copy; 2018 Cild.a, Cont. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
     </main>
 

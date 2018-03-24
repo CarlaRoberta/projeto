@@ -31,21 +31,20 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Project name</a>
+                            <a class="navbar-brand" href="#">Cild.a</a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li class="active"><a href="index.php">Home</a></li>
+                                <li><a href="sobre.php">Sobre</a></li>
+                                <li><a href="#contact">Funcionarios</a></li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
+                                        <li><a href="#">Folha de Pagamento</a></li>
+                                        <li><a href="#">Calculo de Rescisão</a></li>
                                         <li role="separator" class="divider"></li>
-                                        <li class="dropdown-header">Nav header</li>
+                                        <li class="dropdown-header">Outros</li>
                                         <li><a href="#">Separated link</a></li>
                                         <li><a href="#">One more separated link</a></li>
                                     </ul>
@@ -75,8 +74,8 @@
                         <div class="carousel-caption">
                             <h1>Saiba sobre o Projeto Cild.a</h1>
                             <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
-                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires, Carla Roberta</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Saiba mais</a></p>
+                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires e Carla Roberta</p>
+                            <p><a class="btn btn-lg btn-primary" href="sobre.php" role="button">Saiba mais</a></p>
                         </div>
                     </div>
                 </div>
@@ -86,8 +85,8 @@
                         <div class="carousel-caption">
                             <h1>Saiba sobre o Projeto Cild.a</h1>
                             <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
-                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires, Carla Roberta</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Saiba mais</a></p>
+                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires e Carla Roberta</p>
+                            <p><a class="btn btn-lg btn-primary" href="sobre.php" role="button">Saiba mais</a></p>
                         </div>
                     </div>
                 </div>
@@ -97,8 +96,8 @@
                         <div class="carousel-caption">
                             <h1>Saiba sobre o Projeto Cild.a</h1>
                             <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
-                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires, Carla Roberta</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Saiba mais</a></p>
+                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires e Carla Roberta</p>
+                            <p><a class="btn btn-lg btn-primary" href="sobre.php" role="button">Saiba mais</a></p>
                         </div>
                     </div>
                 </div>
