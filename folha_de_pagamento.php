@@ -4,7 +4,7 @@
 //if (!isset($_SESSION['email_cliente']) || $_SESSION['email_cliente'] == false) {
 //    return header('location: indexB.php');
 //}
-require 'incs/inc_menu.php';
+//require 'incs/inc_menu.php';
 ?>
 <html>
     <head>
@@ -34,29 +34,29 @@ require 'incs/inc_menu.php';
 
                     <div class="col-sm-7" style="margin-top: 10px;">
 
-                        <input type="checkbox" id="sf" name="semana[]" value="2" onclick="document.getElementById('hsf').disabled = !this.checked;" >   
+                        <input type="checkbox" id="insa" name="insa[]" value="2" onclick="document.getElementById('hsf').disabled = !this.checked;" >   
 
-                        <label for="sf" style="font-size: 18px;"> Insalubridade? </label> 
+                        <label for="insa" style="font-size: 18px;"> Insalubridade? </label> 
 
-                        <input type="number" name="hora[]" id="hsf" class="form-control"style="height: 45px; width: 300px; margin-left: 30px;" disabled="disabled" placeholder="Informe o percentual de insalubridade">
-
-                    </div>
-
-                    <div class="col-sm-7" style="margin-top: 10px;">
-
-                        <input type="checkbox" id="sf" name="semana[]" value="2" onclick="document.getElementById('hsf').disabled = !this.checked;" >   
-
-                        <label for="sf" style="font-size: 18px;"> Descendentes? </label> 
-
-                        <input type="number" name="hora[]" id="hsf" class="form-control"style="height: 45px; width: 300px; margin-left: 30px;" disabled="disabled" placeholder="Informe o número de descendentes">
+                        <input type="number" name="tinsa[]" id="tinsa" class="form-control"style="height: 45px; width: 300px; margin-left: 30px;" disabled="disabled" placeholder="Informe o percentual de insalubridade">
 
                     </div>
 
                     <div class="col-sm-7" style="margin-top: 10px;">
 
-                        <input type="checkbox" id="sf" name="semana[]" value="2" onclick="document.getElementById('hsf').disabled = !this.checked;" >   
+                        <input type="checkbox" id="des" name="des[]" value="3" onclick="document.getElementById('hsf').disabled = !this.checked;" >   
 
-                        <label for="sf" style="font-size: 18px;"> Periculosidade? </label> 
+                        <label for="des" style="font-size: 18px;"> Descendentes? </label> 
+
+                        <input type="number" name="tdes[]" id="tdes" class="form-control"style="height: 45px; width: 300px; margin-left: 30px;" disabled="disabled" placeholder="Informe o número de descendentes">
+
+                    </div>
+
+                    <div class="col-sm-7" style="margin-top: 10px;">
+
+                        <input type="checkbox" id="per" name="per[]" value="4" onclick="document.getElementById('hsf').disabled = !this.checked;" >   
+
+                        <label for="per" style="font-size: 18px;"> Periculosidade? </label> 
                     </div>
                 </div>
 
