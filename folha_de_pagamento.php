@@ -43,16 +43,12 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-sm-12">
-                                <label for="insa" style="font-size: 18px;">
-                                    Possui adcional de Insalubridade?
-                                </label>
-                                <select id="insa" name="insa" required class="form-control" style="height: 45px;">
-                                    <option value="nd">0</option>
-                                    <option value="dez">10%</option>
-                                    <option value="vinte">20%</option>
-                                    <option value="nd">40%</option>
-                                </select>
+                        <div class="col-sm-12">
+                            <label for="insa" style="font-size: 18px;">
+                                Informe o valor do adcional de insalubridade:
+                            </label>
+                            <div class="text-center">
+                                <input type="number" name="insa" id="insa" required class="form-control"style="height: 45px;" placeholder="Não o símbolo: %. Exemplo caso 10%, coloque apenas 10.">
                             </div>
                         </div>
 
