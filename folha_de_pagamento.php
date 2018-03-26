@@ -32,51 +32,75 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-7" style="margin-top: 10px;">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label for="des" style="font-size: 18px;">
+                                Informe o número de descendentes:
+                            </label>
+                            <div class="text-center">
+                                <input type="number" name="des" id="des" required class="form-control"style="height: 45px;">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="insa" name="insa[]" value="2" onclick="document.getElementById('hsf').disabled = !this.checked;" >   
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="insa" style="font-size: 18px;">
+                                    Possui adcional de Insalubridade?
+                                </label>
+                                <select id="insa" name="insa" required class="form-control" style="height: 45px;">
+                                    <option value="nd">0</option>
+                                    <option value="dez">10%</option>
+                                    <option value="vinte">20%</option>
+                                    <option value="nd">40%</option>
+                                </select>
+                            </div>
+                        </div>
 
-                        <label for="insa" style="font-size: 18px;"> Insalubridade? </label> 
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="peri" style="font-size: 18px;">
+                                    Possui adcional de Periculosidade?
+                                </label>
+                                <select id="insa" name="peri" required class="form-control" style="height: 45px;">
+                                    <option value="nao">Não</option>
+                                    <option value="sim">Sim</option>
+                                </select>
+                            </div>
+                        </div>
 
-                        <input type="number" name="tinsa[]" id="tinsa" class="form-control"style="height: 45px; width: 300px; margin-left: 30px;" disabled="disabled" placeholder="Informe o percentual de insalubridade">
-
-                    </div>
-
-                    <div class="col-sm-7" style="margin-top: 10px;">
-
-                        <input type="checkbox" id="des" name="des[]" value="3" onclick="document.getElementById('hsf').disabled = !this.checked;" >   
-
-                        <label for="des" style="font-size: 18px;"> Descendentes? </label> 
-
-                        <input type="number" name="tdes[]" id="tdes" class="form-control"style="height: 45px; width: 300px; margin-left: 30px;" disabled="disabled" placeholder="Informe o número de descendentes">
-
-                    </div>
-
-                    <div class="col-sm-7" style="margin-top: 10px;">
-
-                        <input type="checkbox" id="per" name="per[]" value="4" onclick="document.getElementById('hsf').disabled = !this.checked;" >   
-
-                        <label for="per" style="font-size: 18px;"> Periculosidade? </label> 
                     </div>
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                    <div class="col-sm-11">
+                        <div class="form-group">
+                            <div class="text-center">
+                                <input type="submit" value="Enviar" 
+                                       id="botao_submit" class="btn btn-primary" style="color: black; height: 45px;">
+                                <input type="reset" value="Limpar" 
+                                       id="botao_limpar" class="btn btn-primary" style="color: black; height: 45px;">
+                            </div>
+                        </div>
+                    </div>
 
-        </div>
-
-        <div class="col-sm-11">
-            <div class="form-group">
-                <div class="text-center">
-                    <input type="submit" value="Enviar" 
-                           id="botao_submit" class="btn btn-primary" style="color: black; height: 45px;">
-                    <input type="reset" value="Limpar" 
-                           id="botao_limpar" class="btn btn-primary" style="color: black; height: 45px;">
-                </div>
-            </div>
-        </div>
-
-    </form>
+            </form>
 
 
 
-</body>
+    </body>
 </html>
 
