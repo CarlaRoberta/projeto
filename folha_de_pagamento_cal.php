@@ -6,6 +6,7 @@
 
 
     <?php
+    error_reporting(0);
 //$valor_salario = $_POST["valor_salario"];
 //if ($valor_salario <= 1693.72) {
 //    $res1 = $valor_salario * 0.08;
@@ -41,6 +42,8 @@
         $calculo = $valor_salario * ($F1 / 100) * 100;
         echo 'Valor do INSS';
         echo (double) "$calculo";
+        $bc_irrf = $valor_salario - $calculo;
+        echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
     }
 // SEGUNDA CONDIÇÃO
     if ($valor_salario >= $V1 and $valor_salario <= $V2) {
@@ -48,27 +51,22 @@
         $calculo = $valor_salario * ($F2 / 100) * 100;
         echo 'Valor do INSS';
         echo (double) "$calculo";
+        $bc_irrf = $valor_salario - $calculo;
+        echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
     }
 // TERCEIRA CONDIÇÃO
     if ($valor_salario >= $V2 and $valor_salario <= $V3) {
         $calculo = $valor_salario * ($F3 / 100) * 100;
         echo 'Valor do INSS';
         echo (double) "$calculo  ";
+        $bc_irrf = $valor_salario - $calculo;
+        echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
     }
 //QUARTA CONDIÇÃO
     if ($valor_salario > $V3) {
         echo 'Valor do INSS';
         echo (double) "$VlrFixo";
-    }
-
-///////////////////  BC IRRF ////////////////////////////////
-    if ($valor_salario <= $V1 || $valor_salario == $V3) {
-        $bc_irrf = $valor_salario - $calculo;
-
-        echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
-    } else {
         $bc_irrf = $valor_salario - $VlrFixo;
-
         echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
     }
 
