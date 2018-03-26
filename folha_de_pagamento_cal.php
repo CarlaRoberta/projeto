@@ -9,13 +9,14 @@
     error_reporting(0);
     //descendente
     $des = $_POST["des"];
+    //periculosidade
+    $peri = $_POST["peri"];
     //insalubridade
     $insa = $_POST["insa"];
-    $nd = $_POST["nd"];
-    $dez = $_POST["dez"];
-    $vinte = $_POST["vinte"];
-    $quatro = $_POST["quatro"];
-
+//    $nd = $_POST["nd"];
+//    $dez = $_POST["dez"];
+//    $vinte = $_POST["vinte"];
+//    $quatro = $_POST["quatro"];
 //$valor_salario = $_POST["valor_salario"];
 //if ($valor_salario <= 1693.72) {
 //    $res1 = $valor_salario * 0.08;
@@ -140,7 +141,8 @@
         }
     }
 // TERCEIRA CONDIÇÃO
-    if ($insa == 0) {
+    // se ele não tiver insalubridade e pericolusidade
+    if ($insa == 0 && ($peri.equals("Não")||  $peri.equals("não") || $peri.equals("nao") || $peri.equals("n"))) {
         if ($valor_salario >= $V2 and $valor_salario <= $V3) {
             $calculo = $valor_salario * ($F3 / 100) * 100;
             echo 'Valor do INSS';
@@ -155,7 +157,9 @@
                 echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
             }
         }
-    } else {
+    }
+    // se ele foi indenizado com insalubridade
+    else {
         if ($insa != 0) {
             if ($insa == 10) {
                 $resultadodosalario = $valor_salario + 95.40;
@@ -170,7 +174,7 @@
             }
         }
         if ($resultadodosalario >= $V2 and $resultadodosalario <= $V3) {
-            $calculo = $valor_salario * ($F3 / 100) * 100;
+            $calculo = $resultadodosalario * ($F3 / 100) * 100;
             echo 'Valor do INSS';
             echo (double) "$calculo  ";
             if ($des == 0) {
@@ -182,6 +186,26 @@
                 $bc_irrf = ($resultadodosalario - $calculo) - $calculo6;
                 echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
             }
+        }
+        // se ele for indenizado com periculosidade
+        else {
+            if($peri.equals("Sim") || $peri.equals("sim") || $peri.equals("s")){
+                $resultadopericulosidade = $valor_salario + ($valor_salario * 0.30);
+            }
+            if ($resultadopericulosidade >= $V2 and $resultadopericulosidade <= $V3) {
+            $calculo = $resultadopericulosidade * ($F3 / 100) * 100;
+            echo 'Valor do INSS';
+            echo (double) "$calculo  ";
+            if ($des == 0) {
+                $bc_irrf = $resultadopericulosidade - $calculo;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+            if ($des > 0) {
+                $calculo6 = $des * 189.59;
+                $bc_irrf = ($resultadopericulosidade - $calculo) - $calculo6;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+        }
         }
     }
 //QUARTA CONDIÇÃO
@@ -280,21 +304,6 @@
         //echo 'IR a pagar';
         //echo (double) "$calculo3";
     }
-
-////////////////////////////// Adcional de Periculosidade ///////////////////////
-
-    $peri = $_POST["peri"];
-    $nao = $_POST["nao"];
-    $sim = $_POST["sim"];
-
-    if ($peri == $nao) {
-        $calculo5 = 0;
-    }
-
-    if ($peri == $sim) {
-        $calculo5 = $valor_salario * 0.30;
-    }
-
 
 
 ////////////////////////////// IR a pagar ///////////////////////

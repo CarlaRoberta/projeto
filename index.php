@@ -13,7 +13,7 @@
                     <p>Folha de pagamento é uma lista mensal, 
                         semanal ou diária da remuneração paga aos trabalhadores de uma instituição,
                         também conhecido como holerite. </p>
-                    <p><a class="btn btn-default" href="#" role="button">Ver detalhes &raquo;</a></p>
+                    <p><a class="btn btn-default" href="folha_de_pagamento.php" role="button">Ver detalhes &raquo;</a></p>
                 </div>
                 <div class="col-lg-4">
                     <img class="img-circle" src="img/recisao.jpg" alt="Generic placeholder image" width="140" height="140">

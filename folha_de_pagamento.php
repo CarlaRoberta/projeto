@@ -57,10 +57,9 @@
                                 <label for="peri" style="font-size: 18px;">
                                     Possui adcional de Periculosidade?
                                 </label>
-                                <select id="insa" name="peri" required class="form-control" style="height: 45px;">
-                                    <option value="nao">Não</option>
-                                    <option value="sim">Sim</option>
-                                </select>
+                                <div class="text-center">
+                                <input type="text" name="peri" id="peri" required class="form-control"style="height: 45px;" placeholder="Só responda Sim ou Não">
+                            </div>
                             </div>
                         </div>
 
