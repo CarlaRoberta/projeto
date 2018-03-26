@@ -6,6 +6,16 @@
 
 
     <?php
+    error_reporting(0);
+    //descendente
+    $des = $_POST["des"];
+    //insalubridade
+    $insa = $_POST["insa"];
+    $nd = $_POST["nd"];
+    $dez = $_POST["dez"];
+    $vinte = $_POST["vinte"];
+    $quatro = $_POST["quatro"];
+
 //$valor_salario = $_POST["valor_salario"];
 //if ($valor_salario <= 1693.72) {
 //    $res1 = $valor_salario * 0.08;
@@ -37,39 +47,156 @@
 
 //$calculo = 0.00;
 // PRIMEIRA CONDIÇÃO
-    if ($valor_salario <= $V1) {
-        $calculo = $valor_salario * ($F1 / 100) * 100;
-        echo 'Valor do INSS';
-        echo (double) "$calculo";
+    if ($insa == 0) {
+        if ($valor_salario <= $V1) {
+            $calculo = $valor_salario * ($F1 / 100) * 100;
+            echo 'Valor do INSS';
+            echo (double) "$calculo";
+            if ($des == 0) {
+                $bc_irrf = $valor_salario - $calculo;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+            if ($des > 0) {
+                $calculo6 = $des * 189.59;
+                $bc_irrf = ($valor_salario - $calculo) - $calculo6;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+        }
+    } else {
+        if ($insa != 0) {
+            if ($insa == 10) {
+                $resultadodosalario = $valor_salario + 95.40;
+            } else {
+                if ($insa == 20) {
+                    $resultadodosalario = $valor_salario + 190.80;
+                } else {
+                    if ($insa == 40) {
+                        $resultadodosalario = $valor_salario + 381.60;
+                    }
+                }
+            }
+            if ($resultadodosalario <= $V1) {
+                $calculo = $resultadodosalario * ($F1 / 100) * 100;
+                echo 'Valor do INSS';
+                echo (double) "$calculo";
+                if ($des == 0) {
+                    $bc_irrf = $resultadodosalario - $calculo;
+                    echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+                }
+                if ($des > 0) {
+                    $calculo6 = $des * 189.59;
+                    $bc_irrf = ($resultadodosalario - $calculo) - $calculo6;
+                    echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+                }
+            }
+        }
     }
-// SEGUNDA CONDIÇÃO
-    if ($valor_salario >= $V1 and $valor_salario <= $V2) {
 
-        $calculo = $valor_salario * ($F2 / 100) * 100;
-        echo 'Valor do INSS';
-        echo (double) "$calculo";
+// SEGUNDA CONDIÇÃO
+    if ($insa == 0) {
+        if ($valor_salario >= $V1 and $valor_salario <= $V2) {
+
+            $calculo = $valor_salario * ($F2 / 100) * 100;
+            echo 'Valor do INSS';
+            echo (double) "$calculo";
+            if ($des == 0) {
+                $bc_irrf = $valor_salario - $calculo;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+            if ($des > 0) {
+                $calculo6 = $des * 189.59;
+                $bc_irrf = ($valor_salario - $calculo) - $calculo6;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+        }
+    } else {
+        if ($insa != 0) {
+            if ($insa == 10) {
+                $resultadodosalario = $valor_salario + 95.40;
+            } else {
+                if ($insa == 20) {
+                    $resultadodosalario = $valor_salario + 190.80;
+                } else {
+                    if ($insa == 40) {
+                        $resultadodosalario = $valor_salario + 381.60;
+                    }
+                }
+            }
+            if ($resultadodosalario >= $V1 and $resultadodosalario <= $V2) {
+
+                $calculo = $resultadodosalario * ($F2 / 100) * 100;
+                echo 'Valor do INSS';
+                echo (double) "$calculo";
+                if ($des == 0) {
+                    $bc_irrf = $resultadodosalario - $calculo;
+                    echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+                }
+                if ($des > 0) {
+                    $calculo6 = $des * 189.59;
+                    $bc_irrf = ($resultadodosalario - $calculo) - $calculo6;
+                    echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+                }
+            }
+        }
     }
 // TERCEIRA CONDIÇÃO
-    if ($valor_salario >= $V2 and $valor_salario <= $V3) {
-        $calculo = $valor_salario * ($F3 / 100) * 100;
-        echo 'Valor do INSS';
-        echo (double) "$calculo  ";
+    if ($insa == 0) {
+        if ($valor_salario >= $V2 and $valor_salario <= $V3) {
+            $calculo = $valor_salario * ($F3 / 100) * 100;
+            echo 'Valor do INSS';
+            echo (double) "$calculo  ";
+            if ($des == 0) {
+                $bc_irrf = $valor_salario - $calculo;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+            if ($des > 0) {
+                $calculo6 = $des * 189.59;
+                $bc_irrf = ($valor_salario - $calculo) - $calculo6;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+        }
+    } else {
+        if ($insa != 0) {
+            if ($insa == 10) {
+                $resultadodosalario = $valor_salario + 95.40;
+            } else {
+                if ($insa == 20) {
+                    $resultadodosalario = $valor_salario + 190.80;
+                } else {
+                    if ($insa == 40) {
+                        $resultadodosalario = $valor_salario + 381.60;
+                    }
+                }
+            }
+        }
+        if ($resultadodosalario >= $V2 and $resultadodosalario <= $V3) {
+            $calculo = $valor_salario * ($F3 / 100) * 100;
+            echo 'Valor do INSS';
+            echo (double) "$calculo  ";
+            if ($des == 0) {
+                $bc_irrf = $resultadodosalario - $calculo;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+            if ($des > 0) {
+                $calculo6 = $des * 189.59;
+                $bc_irrf = ($resultadodosalario - $calculo) - $calculo6;
+                echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+            }
+        }
     }
 //QUARTA CONDIÇÃO
     if ($valor_salario > $V3) {
         echo 'Valor do INSS';
         echo (double) "$VlrFixo";
-    }
-
-///////////////////  BC IRRF ////////////////////////////////
-    if ($valor_salario <= $V1 || $valor_salario == $V3) {
-        $bc_irrf = $valor_salario - $calculo;
-
-        echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
-    } else {
-        $bc_irrf = $valor_salario - $VlrFixo;
-
-        echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+        if ($des == 0) {
+            $bc_irrf = $valor_salario - $calculo;
+            echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+        }
+        if ($des > 0) {
+            $calculo6 = $des * 189.59;
+            $bc_irrf = ($valor_salario - $calculo) - $calculo6;
+            echo '<br>' . 'BC IRRF:' . '<br>' . $bc_irrf;
+        }
     }
 
 ///////////////////// IR SEM DEDUÇÃO /////////////////////////
@@ -81,10 +208,10 @@
     $N4 = 3751.05;
 
     /* Declara as porcentagens para aplicar no calculo */
-    $P1 = 7.5;
+    $P1 = 0.075;
     $P2 = 0.15;
-    $P3 = 22.5;
-    $P4 = 27.5;
+    $P3 = 0.225;
+    $P4 = 0.275;
 
     /* Busca valor do Salário informado */
     $valor_salario = $_POST["valor_salario"];
@@ -154,35 +281,6 @@
         //echo (double) "$calculo3";
     }
 
-////////////////////////////// Descendentes ///////////////////////
-    $des = $_POST["des"];
-
-    $calculo6 = $des * 189.59;
-
-/////////////////////////////// Calculo Insalubridade ///////////////////////////
-
-    $insa = $_POST["insa"];
-    $nd = $_POST["nd"];
-    $dez = $_POST["dez"];
-    $vinte = $_POST["vinte"];
-    $quatro = $_POST["quatro"];
-
-    if ($insa == 0) {
-        $calculo4 = 0;
-    }
-
-    if ($insa == $dez) {
-        $calculo4 = 954 * 0.10;
-    }
-
-    if ($insa == $vinte) {
-        $calculo4 = 954 * 0.20;
-    }
-
-    if ($insa == $quatro) {
-        $calculo4 = 954 * 0.40;
-    }
-
 ////////////////////////////// Adcional de Periculosidade ///////////////////////
 
     $peri = $_POST["peri"];
@@ -208,43 +306,43 @@
 ////////////////////////////// FGTS //////////////////////////////
     $fgts = $valor_salario * 0.08;
     ?>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">INSS</th>
-                <th scope="col">BC IRRF</th>
-                <th scope="col">IR sem dedução</th>
-                <th scope="col">Ir a pagar</th>
-                <th scope="col">FGTS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td><?php echo $calculo ?></td>
-                <td><?php echo $bc_irrf ?></td>
-                <td><?php echo $calculo2 ?></td>
-                <td><?php echo $calculo7 ?></td>
-                <td><?php echo $fgts ?></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>oi</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>ata</td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>nada haver irmão</td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
+    <body>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">INSS</th>
+                    <th scope="col">BC IRRF</th>
+                    <th scope="col">IR sem dedução</th>
+                    <th scope="col">Ir a pagar</th>
+                    <th scope="col">FGTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><?php echo $calculo ?></td>
+                    <td><?php echo $bc_irrf ?></td>
+                    <td><?php echo $calculo2 ?></td>
+                    <td><?php echo $calculo7 ?></td>
+                    <td><?php echo $fgts ?></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>oi</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>ata</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>nada haver irmão</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
