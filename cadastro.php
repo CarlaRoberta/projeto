@@ -56,7 +56,13 @@
                                 OU FAZ CERTO.
                             </div>
                         </div>
-
+                        <center>
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <a style="color: palevioletred" href="login.php"> Login</a>
+                                </label>
+                            </div>
+                        </center>
                     </div>
                 </div>
                 <center>

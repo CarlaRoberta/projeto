@@ -9,6 +9,7 @@
         <title>Loga aí</title>
 
         <!-- Bootstrap core CSS -->
+<!--        <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
         <link href="css/bood.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
         <link href="css/singin.css" rel="stylesheet" type="text/css"/>
@@ -24,7 +25,7 @@
             <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
             <div class="checkbox mb-3">
                 <label>
-                    <input type="checkbox" value="remember-me"> Me lembre
+                    <a style="color: palevioletred" href="cadastro.php"> Me Cadastar</a>
                 </label>
             </div>
             <button class="btn btn-lg btn-danger btn-block" type="submit">Entrar</button>

@@ -28,7 +28,7 @@
                         <div class="row">
                             <div class="col-md-12 mb-3">
                                 <label for="firstName"> Nome</label>
-                                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="" required>
+                                <input type="text"  class="form-control" name="firstName" id="firstName" placeholder="" required>
                                 <div class="invalid-feedback">
                                     OU FAZ CERTO.
                                 </div>
@@ -37,18 +37,17 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="insalubridade">Porcentagem da insalubridade</label><br>
-                                <input type="radio" name="insalubridade" value="10">10<br>
-                                <input type="radio" name="insalubridade" value="20">20<br>
-                                <input type="radio" name="insalubridade" value="40">40<br>
-
+                                <label class="radio-inline"><input type="radio" name="insalubridade" value="10">10<br></label>
+                                <label class="radio-inline"><input type="radio" name="insalubridade" value="20">20<br></label>
+                                <label class="radio-inline"><input type="radio" name="insalubridade" value="40">40<br></label>                             
                                 <div class="invalid-feedback">
                                     OU FAZ CERTO.
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="periculosidade">Periculosidade</label><br>
-                                <input type="radio" name="periculosidade" value="Sim">Sim<br>
-                                <input type="radio" name="periculosidade" value="Não">Não<br>
+                                <label class="radio-inline"><input type="radio" name="periculosidade" value="Sim">Sim<br></label>
+                                <label class="radio-inline"><input type="radio" name="periculosidade" value="Não">Não<br></label>
                                 <div class="invalid-feedback">
                                     OU FAZ CERTO.
                                 </div>
@@ -70,7 +69,7 @@
                                     OU FAZ CERTO.
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
                 <center>
