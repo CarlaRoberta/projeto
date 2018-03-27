@@ -1,3 +1,4 @@
+<?php require 'incs/inc_menu2.php'; ?>
 <html>
     <head>
         <title> Folha de Pagamento </title>  
@@ -6,30 +7,29 @@
 
 
     <?php
+    require 'conexao.php';
     error_reporting(0);
+    $id = $_GET["id"];
+    $sql = "select * from funcionarios WHERE funcionarios.FU_ID = $id";
+    $result = mysqli_query($con, $sql);
+    $dados = mysqli_fetch_assoc($result);
+    $id_funcionarios = $dados ['FU_ID'];
+    $nome = $dados ['FU_NAME'];
+    $insa = $dados ['FU_ISA'];
+    $peri = $dados ['FU_PERI'];
+    $des = $dados ['FU_DES'];
+    $valor_salario = $dados['FU_SALARIO'];
     //descendente
-    $des = $_POST["des"];
-    //periculosidade
-    $peri = $_POST["peri"];
-    //insalubridade
-    $insa = $_POST["insa"];
+//    $des = $_POST["des"];
+//    //periculosidade
+//    $peri = $_POST["peri"];
+//    //insalubridade
+//    $insa = $_POST["insa"];
 //    $nd = $_POST["nd"];
 //    $dez = $_POST["dez"];
 //    $vinte = $_POST["vinte"];
 //    $quatro = $_POST["quatro"];
 //$valor_salario = $_POST["valor_salario"];
-//if ($valor_salario <= 1693.72) {
-//    $res1 = $valor_salario * 0.08;
-//}
-//if ($valor_salario >= 1693.73 && $valor_salario = 2822.90) {
-//    $res1 = $valor_salario * 0.09;
-//}
-//if ($valor_salario >= 2822.91 && $valor_salario = 5645.80) {
-//    $res1 = $valor_salario * 0.11;
-//}
-//echo 'valor do INSS:' .$res1;
-//////////////////////////////////////////////////////////////////////////////////////////////
-// CÓDIGO FONTE DO CALCULO DO INSS VERSÃO 0.1
     /* Declara variáveis (faixa dos valores da tabela do inss */
     $V1 = 1693.72;
     $V2 = 2822.90;
@@ -41,11 +41,10 @@
     $F3 = 0.11;
 
     /* Declara o valor fixo */
-    $VlrFixo = 621.03;
+    $VlrFixo = 5645.80;
 
     /* Busca valor do Salário informado */
-    $valor_salario = $_POST["valor_salario"];
-
+//    $valor_salario = $_POST["valor_salario"];
 //$calculo = 0.00;
 // PRIMEIRA CONDIÇÃO
     // se ele não tiver insalubridade e pericolusidade
@@ -233,13 +232,13 @@
     // se ele não tiver insalubridade e pericolusidade
     if ($insa == 0 && ($peri == "Não" || $peri == "não" || $peri == "nao" || $peri == "Nao" || $peri == "N" || $peri == "n")) {
         if ($valor_salario > $V3) {
-            $calculo = $VlrFixo;
+            $calculo = $VlrFixo * ($F3 / 100) * 100;
             if ($des == 0) {
-                $bc_irrf = $valor_salario - $calculo;
+                $bc_irrf = $resultadodosalario - $calculo;
             }
             if ($des > 0) {
                 $calculo6 = $des * 189.59;
-                $bc_irrf = ($valor_salario - $calculo) - $calculo6;
+                $bc_irrf = ($resultadodosalario - $calculo) - $calculo6;
             }
         }
         $salario = $valor_salario;
@@ -259,7 +258,7 @@
         }
         $salario = $resultadodosalario;
         if ($resultadodosalario > $V3) {
-            $calculo = $resultadodosalario * ($F3 / 100) * 100;
+            $calculo = $VlrFixo * ($F3 / 100) * 100;
             if ($des == 0) {
                 $bc_irrf = $resultadodosalario - $calculo;
             }
@@ -350,29 +349,35 @@
     }
 
 ////////////////////////////// FGTS //////////////////////////////
-    $fgts = $valor_salario * 0.08;
+    $fgts = $salario * 0.08;
     ?>
     <body>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Salario</th>
-                    <th scope="col">INSS</th>
-                    <th scope="col">BC IRRF</th>
-                    <th scope="col">IR sem dedução</th>
-                    <th scope="col">Ir a pagar</th>
-                    <th scope="col">FGTS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row"><?php echo $salario; ?></th>
-                    <td><?php echo $calculo ?></td>
-                    <td><?php echo $bc_irrf ?></td>
-                    <td><?php echo $calculo2 ?></td>
-                    <td><?php echo $calculo3 ?></td>
-                    <td><?php echo $fgts ?></td>
-                </tr>
+        <div class="col-sm-11 col-sm-offset-3 col-md-10 col-md-offset-2 main">           
+            <h2 class="sub-header">Folha de pagamento <?php echo $nome?></h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Salario</th>
+                            <th scope="col">INSS</th>
+                            <th scope="col">BC IRRF</th>
+                            <th scope="col">IR sem dedução</th>
+                            <th scope="col">Ir a pagar</th>
+                            <th scope="col">FGTS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><?php echo $salario; ?></th>
+                            <td><?php echo $calculo ?></td>
+                            <td><?php echo $bc_irrf ?></td>
+                            <td><?php echo $calculo2 ?></td>
+                            <td><?php echo $calculo3 ?></td>
+                            <td><?php echo $fgts ?></td>
+                        </tr>
 
-            </tbody>
-        </table>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <?php require 'incs/inc_rodape.php'; ?>

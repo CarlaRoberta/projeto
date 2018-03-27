@@ -1,13 +1,13 @@
 <meta charset="UTF-8">
 
 <?php
-//error_reporting(E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
-//$hostname = "localhost";
-//$user = "root";
-//$pass = "";
-//$bancodedados = "projeto";
+error_reporting(E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
+$hostname = "localhost";
+$user = "root";
+$pass = "";
+$bancodedados = "projeto";
 
-//$con = mysqli_connect($hostname, $user, $pass, $bancodedados);
+$con = mysqli_connect($hostname, $user, $pass, $bancodedados);
 //if (!$con) {
   //  exit("Erro ao conectar ao Banco de Dados");
 //} 

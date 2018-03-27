@@ -5,9 +5,14 @@
 </head>
 
 <body>
+    <?php
+    require 'conexao.php';
+    $sql = "select * from funcionarios";
+    $result = mysqli_query($con, $sql);
+    ?>
     <div class="row">
+        <a style="color: black" href="cadastrofuncionarios.php"><button class="center-block btn " style="font-size: 200%"><span  class="glyphicon glyphicon-user" > Cadastro de Funcionarios</span></button></a>     
         <div class="col-sm-11 col-sm-offset-3 col-md-10 col-md-offset-2 main">           
-
             <h2 class="sub-header">Lista de Funcionarios</h2>
             <div class="table-responsive">
                 <table class="table table-striped">
@@ -15,124 +20,33 @@
                         <tr>
                             <th>id</th>
                             <th>Nome</th>
-                            <th>Idade</th>
-                            <th>Sexo</th>
-                            <th>Setor</th>
+                            <th>dependentes</th>
+                            <th>insalubridade</th>
+                            <th>periculosidade</th>
+                            <th>Salário</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Lorem</td>
-                            <td>20</td>
-                            <td>femenino</td>
-                            <td>sit</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>amet</td>
-                            <td>19</td>
-                            <td>masculino</td>
-                            <td>elit</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>janaina</td>
-                            <td>38</td>
-                            <td>femenino</td>
-                            <td>sit</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>libero</td>
-                            <td>30</td>
-                            <td>masculino</td>
-                            <td>ante</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>lorena</td>
-                            <td>30</td>
-                            <td>femenino</td>
-                            <td>sit</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Nulla</td>
-                            <td>41</td>
-                            <td>femenino</td>
-                            <td>at</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Rosana</td>
-                            <td>20</td>
-                            <td>femenino</td>
-                            <td>sit</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>sagittis</td>
-                            <td>50</td>
-                            <td>masculino</td>
-                            <td>mauris</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Fusce</td>
-                            <td>25</td>
-                            <td>femenino</td>
-                            <td>sed</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>augue</td>
-                            <td>34</td>
-                            <td>masculino</td>
-                            <td>Mauris</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>gabriela</td>
-                            <td>38</td>
-                            <td>femenino</td>
-                            <td>arcu</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>eget</td>
-                            <td>28</td>
-                            <td>masculino</td>
-                            <td>aptent</td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>taciti</td>
-                            <td>32</td>
-                            <td>femenino</td>
-                            <td>litora</td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td>torquent</td>
-                            <td>21</td>
-                            <td>masculino</td>
-                            <td>nostra</td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td>perciana</td>
-                            <td>19</td>
-                            <td>femenino</td>
-                            <td>Curabitur</td>
-                        </tr>
-                        <tr>
-                            <td>16</td>
-                            <td>sodales</td>
-                            <td>39</td>
-                            <td>masculino</td>
-                            <td>libero</td>
-                        </tr>
+                        <?php
+                        while ($dados = mysqli_fetch_assoc($result)) {
+                            $id_funcionarios = $dados ['FU_ID'];
+                            $nome = $dados ['FU_NAME'];
+                            $insalubridade = $dados ['FU_ISA'];
+                            $periculosidade = $dados ['FU_PERI'];
+                            $dependentes = $dados ['FU_DES'];
+                            $valor_salario = $dados['FU_SALARIO'];
+                            ?>
+                            <tr>
+                                <td><?php echo $id_funcionarios ?></td>
+                                <td><?php echo $nome ?></td>
+                                <td><?php echo $dependentes ?></td>
+                                <td><?php echo $insalubridade ?></td>
+                                <td><?php echo $periculosidade ?></td>
+                                <td><?php echo $valor_salario ?></td>
+                            </tr>  
+                            <?php
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>

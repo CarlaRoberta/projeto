@@ -41,23 +41,19 @@
                     <h1 class="page-header">Criadores</h1>
 
                     <div class="row placeholders">
-                        <div class="col-xs-6 col-sm-2 placeholder">
+                        <div class="col-xs-6 col-sm-3 placeholder">
                             <img src= "img/criadores/ana.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
                             <h4>ANNA</h4>
-                        </div>
-                        <div class="col-xs-6 col-sm-2 placeholder">
-                            <img src="img/criadores/daniela.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                            <h4>DANIELA</h4>
-                        </div>
-                        <div class="col-xs-6 col-sm-2 placeholder">
+                        </div>                      
+                        <div class="col-xs-6 col-sm-3 placeholder">
                             <img src="img/criadores/luana.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
                             <h4>LUANA</h4>
                         </div>
-                        <div class="col-xs-6 col-sm-2 placeholder">
+                        <div class="col-xs-6 col-sm-3 placeholder">
                             <img src="img/criadores/isabella.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
                             <h4>ISABELLA</h4>
                         </div>
-                        <div class="col-xs-6 col-sm-2 placeholder">
+                        <div class="col-xs-6 col-sm-3 placeholder">
                             <img src="img/criadores/carla.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
                             <h4>CARLA</h4>
                         </div>
