@@ -36,8 +36,11 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="insalubridade">Porcentagem da insalubridade</label>
-                                <input type="number" class="form-control" id="insalubridade" name="insalubridade" placeholder="Não o símbolo: %. Exemplo caso 10%, coloque apenas 10." required="">
+                                <label for="insalubridade">Porcentagem da insalubridade</label><br>
+                                <input type="radio" name="insalubridade" value="10">10<br>
+                                <input type="radio" name="insalubridade" value="20">20<br>
+                                <input type="radio" name="insalubridade" value="40">40<br>
+
                                 <div class="invalid-feedback">
                                     OU FAZ CERTO.
                                 </div>

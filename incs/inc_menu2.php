@@ -41,7 +41,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Folha de Pagamento</a></li>
+                                        <li><a href="folha_de_pagamento.php">Folha de Pagamento</a></li>
                                         <li><a href="#">Calculo de Rescisão</a></li>
                                         <li role="separator" class="divider"></li>
                                         <li class="dropdown-header">Outros</li>
