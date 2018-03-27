@@ -43,28 +43,30 @@
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="periculosidade">Periculosidade</label>
-                                <input type="text" class="form-control" id="periculosidade" name="periculosidade" placeholder="Só responda Sim ou Não" required="">
+                                <label for="periculosidade">Periculosidade</label><br>
+                                <input type="radio" name="periculosidade" value="Sim">Sim<br>
+                                <input type="radio" name="periculosidade" value="Não">Não<br>
                                 <div class="invalid-feedback">
                                     OU FAZ CERTO.
                                 </div>
+
                             </div>
                         </div>
                         <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="dependentes">Numero de dependentes</label>
+                            <div class="col-md-6 mb-3">
+                                <label for="dependentes">Numero de dependentes</label>
                                 <input type="number" class="form-control" id="dependentes" name="dependentes" placeholder="" required="">
                                 <div class="invalid-feedback">
                                     OU FAZ CERTO.
                                 </div>
-                        </div>
+                            </div>
                             <div class="col-md-6 mb-3">
-                            <label for="salario">Salario</label>
+                                <label for="salario">Salario</label>
                                 <input type="number" class="form-control" id="salario" name="salario" placeholder="" required="">
                                 <div class="invalid-feedback">
                                     OU FAZ CERTO.
                                 </div>
-                        </div>
+                            </div>
                         </div>
                     </div>
                 </div>
