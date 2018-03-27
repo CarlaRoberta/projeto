@@ -1,14 +1,14 @@
 <body>
-        <?php
-        require 'conexao.php';
-        $sql = "select * from funcionarios";
-        $result = mysqli_query($con, $sql);
-        ?>
-    <center>
+    <?php
+    require 'conexao.php';
+    $sql = "select * from funcionarios";
+    $result = mysqli_query($con, $sql);
+    ?>
+    <div class="container">
         <div class="row">
-            <div class="col-sm-3">
-                
-                    <div class="table-responsive">
+            <div class="center col-sm-4">
+                <div class="table-responsive">
+                    <center>   
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
@@ -32,8 +32,9 @@
                                 }
                                 ?>
                             </tbody>
-                        </table> 
-                    </div>                
+                        </table>  
+                    </center>
+                </div>                
             </div>
         </div>
-    </center>
+    </div>

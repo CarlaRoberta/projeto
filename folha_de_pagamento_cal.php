@@ -380,6 +380,7 @@
                 </table>
             </div>
         </div>
-                <?php require 'tabelinha/tabeladepagamento.php'; ?>
-
-        <?php require 'incs/inc_rodape.php'; ?>
+    <center>
+        <a class="left center" href="folha_de_pagamento.php"><button class="btn btn-danger btn-lg " type="button"><span class="glyphicon glyphicon-hand-left"> Voltar</span></button></a>
+    </center>
+    <?php require 'incs/inc_rodape.php'; ?>
