@@ -7,7 +7,7 @@
 <body>
     <?php
     require 'conexao.php';
-    $sql = "select * from funcionarios";
+    $sql = "select * from funcionarios ";
     $result = mysqli_query($con, $sql);
     ?>
     <div class="row">
