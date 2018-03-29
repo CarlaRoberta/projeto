@@ -37,9 +37,9 @@
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="index.php">Home</a></li>
                                 <li><a href="sobre.php">Sobre</a></li>
-                                <li><a href="funcionarios.php">Funcionarios</a></li>                                
+                                <li><a href="funcionarios.php">Funcionários</a></li>                                
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculos <span class="caret"></span></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cálculos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="folha_de_pagamento.php">Folha de Pagamento</a></li>
                                         <li><a href="#">Calculo de Rescisão</a></li>

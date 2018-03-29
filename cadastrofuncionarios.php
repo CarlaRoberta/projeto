@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="img/icone.jpg">
-        <title>Faz o cadastro aí</title>
+        <title>Cadastro de Funcionários</title>
 
         <!-- Bootstrap core CSS -->
         <link href="css/bood.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
         <div class="container">
             <div class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="img/cont.png" alt="" width="72" height="72">
-                <h2>Cadastro de Funcionarios</h2>
-                <p class="lead">Cadastrar os funcionarios de sua Empresa.</p>
+                <h2>Cadastro de Funcionários</h2>
+                <p class="lead">Cadastre os funcionários de sua Empresa.</p>
             </div>
             <form class="form-signin" action="inserir/inserir_funcionarios.php" method="POST"  novalidate>
                 <div class="row">
@@ -36,7 +36,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="insalubridade">Porcentagem da insalubridade</label><br>
+                                <label for="insalubridade">Porcentagem da Insalubridade</label><br>
                                 <label class="radio-inline"><input type="radio" name="insalubridade" value="10">10<br></label>
                                 <label class="radio-inline"><input type="radio" name="insalubridade" value="20">20<br></label>
                                 <label class="radio-inline"><input type="radio" name="insalubridade" value="40">40<br></label>                             
@@ -56,14 +56,14 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="dependentes">Numero de dependentes</label>
+                                <label for="dependentes">Número de Dependentes</label>
                                 <input type="number" class="form-control" id="dependentes" name="dependentes" placeholder="" required="">
                                 <div class="invalid-feedback">
                                     OU FAZ CERTO.
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="salario">Salario</label>
+                                <label for="salario">Informe o salário do funcionário</label>
                                 <input type="number" class="form-control" id="salario" name="salario" placeholder="" required="">
                                 <div class="invalid-feedback">
                                     OU FAZ CERTO.
@@ -79,7 +79,7 @@
             </form>
         </div>
         <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; Carla - 2018 </p>
+            <p class="mb-1">&copy; Cild.a - 2018 </p>
         </footer>
 
         <!-- Bootstrap core JavaScript

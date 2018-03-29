@@ -11,18 +11,18 @@
     $result = mysqli_query($con, $sql);
     ?>
     <div class="row">
-        <a style="color: black" href="cadastrofuncionarios.php"><button class="center-block btn " style="font-size: 200%"><span  class="glyphicon glyphicon-user" > Cadastro de Funcionarios</span></button></a>     
+        <a style="color: black" href="cadastrofuncionarios.php"><button class="center-block btn " style="font-size: 200%"><span  class="glyphicon glyphicon-user" > Cadastro de Funcionários</span></button></a>     
         <div class="col-sm-11 col-sm-offset-3 col-md-10 col-md-offset-2 main">           
-            <h2 class="sub-header">Lista de Funcionarios</h2>
+            <h2 class="sub-header">Lista de Funcionários</h2>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>id</th>
+                            <th>ID</th>
                             <th>Nome</th>
-                            <th>dependentes</th>
-                            <th>insalubridade</th>
-                            <th>periculosidade</th>
+                            <th>Dependentes</th>
+                            <th>Insalubridade</th>
+                            <th>Periculosidade</th>
                             <th>Salário</th>
                         </tr>
                     </thead>
