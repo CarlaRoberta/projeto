@@ -24,7 +24,7 @@ require 'incs/inc_menu2.php';
 
 <!-- <form class="form" action="calculo_recisao_cal.php?salario=<?php //echo $valor_salario;             ?>" method="POST"  novalidate> -->  
 
-    <form class="form" action="seguro_desemprego_cal" method="POST"  novalidate>
+    <form class="form" action="seguro_desemprego_cal" method="POST">
 
         <div class="row">
             <div class="col-md-5 mb-3">
