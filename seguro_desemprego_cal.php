@@ -51,7 +51,7 @@ if ($cal2 <= $valor1) {
 // SEGUNDA CONDIÇÃO
 if ($cal2 >= $valor1 and $cal2 <= $valor2) {
     $cal3 = $cal2 * ($p2 / 100) * 100;
-    $cal4 = $cal3 + 10088.56;
+    $cal4 = $cal3 + 1088.56;
     echo (double) 'O valor da parcela será' . $cal4 . '<br>';
 }
 
