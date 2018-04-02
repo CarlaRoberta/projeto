@@ -23,41 +23,115 @@ $valorFixo = 1542.24;
 
 /* Pega valores */
 $ad = $_POST["ad"];
-$um = $_POST["um"];
-$dois = $_POST["dois"];
-$tres = $_POST["tres"];
 $as = $_POST["as"];
 $ps = $_POST["ps"];
 $us = $_POST["us"];
+$mt = $_POST["mt"];
 
-//Número de meses
-$mn1 = 12;
-$m1 = 24;
+
+
 
 //Cálculo 1
 $cal1 = $as + $ps + $us;
 $cal2 = $cal1 / 3;
 
 // PRIMEIRA CONDIÇÃO
-//if ($ad == $um) {
-//    if () {
-if ($cal2 <= $valor1) {
-    $cal3 = $cal2 * ($p1 / 100) * 100;
-    //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
-    echo 'O valor da parcela será' . $cal3 . '<br>';
-}
-//}
-//}
-// SEGUNDA CONDIÇÃO
-if ($cal2 >= $valor1 and $cal2 <= $valor2) {
-    $cal3 = $cal2 * ($p2 / 100) * 100;
-    $cal4 = $cal3 + 1088.56;
-    echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+if ($ad == 'um') {
+    if ($mt >= 18 and $mt <= 23) {
+        if ($cal2 <= $valor1) {
+            $cal3 = $cal2 * ($p1 / 100) * 100;
+            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+            echo 'O número de parcelas: 4';
+            echo 'O valor da parcela será' . $cal3 . '<br>';
+        }
+
+        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+            $cal3 = $cal2 * ($p2 / 100) * 100;
+            $cal4 = $cal3 + 1088.56;
+            echo 'O número de parcelas: 4';
+            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+        }
+
+        if ($cal2 > $valor3) {
+            echo 'O número de parcelas: 4';
+            echo 'O valor da parcela será' . $valorFixo . '<br>';
+        }
+    }
 }
 
-//TERCEIRA CONDIÇÃO
-if ($cal2 > $valor3) {
-    echo 'O valor da parcela será' . $valorFixo . '<br>';
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//SEGUNDA CONDIÇÃO DA TABELA - PARA A PRIMEIRA SOLICITAÇÃO
+if ($ad == 'um') {
+    if ($mt >= 24) {
+        if ($cal2 <= $valor1) {
+            $cal3 = $cal2 * ($p1 / 100) * 100;
+            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+            echo 'O número de parcelas: 5';
+            echo 'O valor da parcela será' . $cal3 . '<br>';
+        }
+
+        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+            $cal3 = $cal2 * ($p2 / 100) * 100;
+            $cal4 = $cal3 + 1088.56;
+            echo 'O número de parcelas: 5';
+            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+        }
+
+        if ($cal2 > $valor3) {
+            echo 'O número de parcelas: 5';
+            echo 'O valor da parcela será' . $valorFixo . '<br>';
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//PRIMEIRA CONDIÇÃO DA TABELA - PARA A PRIMEIRA SOLICITAÇÃO
+if ($ad == 'dois') {
+    if ($mt >= 18 and $mt <= 23) {
+        if ($cal2 <= $valor1) {
+            $cal3 = $cal2 * ($p1 / 100) * 100;
+            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+            echo 'O número de parcelas: 4';
+            echo 'O valor da parcela será' . $cal3 . '<br>';
+        }
+
+        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+            $cal3 = $cal2 * ($p2 / 100) * 100;
+            $cal4 = $cal3 + 1088.56;
+            echo 'O número de parcelas: 4';
+            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+        }
+
+        if ($cal2 > $valor3) {
+            echo 'O número de parcelas: 4';
+            echo 'O valor da parcela será' . $valorFixo . '<br>';
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//SEGUNDA CONDIÇÃO DA TABELA - PARA A PRIMEIRA SOLICITAÇÃO
+if ($ad == 'dois') {
+    if ($mt <= 11) {
+        if ($cal2 <= $valor1) {
+            $cal3 = $cal2 * ($p1 / 100) * 100;
+            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+            echo 'O número de parcelas: 5';
+            echo 'O valor da parcela será' . $cal3 . '<br>';
+        }
+
+        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+            $cal3 = $cal2 * ($p2 / 100) * 100;
+            $cal4 = $cal3 + 1088.56;
+            echo 'O número de parcelas: 5';
+            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+        }
+
+        if ($cal2 > $valor3) {
+            echo 'O número de parcelas: 5';
+            echo 'O valor da parcela será' . $valorFixo . '<br>';
+        }
+    }
 }
 ?>
 
