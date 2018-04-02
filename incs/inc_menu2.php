@@ -42,7 +42,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cálculos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="folha_de_pagamento.php">Folha de Pagamento</a></li>
-                                        <li><a href="#">Calculo de Rescisão</a></li>
+                                        <li><a href="recisao.php">Calculo de Rescisão</a></li>
                                         <li role="separator" class="divider"></li>
                                         <li class="dropdown-header">Outros</li>
                                         <li><a href="#">Separated link</a></li>

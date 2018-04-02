@@ -350,7 +350,14 @@
 
 ////////////////////////////// FGTS //////////////////////////////
     $fgts = $salario * 0.08;
+    $salario = number_format($salario, 2);
+    $calculo = number_format($calculo, 2);
+    $bc_irrf = number_format($bc_irrf, 2);
+    $calculo2 = number_format($calculo2, 2);
+    $calculo3 = number_format($calculo3, 2);
+    $fgts = number_format($fgts, 2);
     ?>
+
     <body>
         <div class="col-sm-11 col-sm-offset-3 col-md-10 col-md-offset-2 main">           
             <h2 class="sub-header">Folha de pagamento <?php echo $nome ?></h2>
