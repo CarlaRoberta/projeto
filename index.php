@@ -22,10 +22,11 @@
                     <p><a class="btn btn-default" href="recisao.php" role="button">Ver detalhes &raquo;</a></p>
                 </div>
                 <div class="col-lg-4">
-                    <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Heading</h2>
-                    <p></p>
-                    <p><a class="btn btn-default" href="#" role="button">Ver detalhes &raquo;</a></p>
+                    <img class="img-circle" src="img/seguro.jpg" alt="Generic placeholder image" width="140" height="140">
+                    <h2>Seguro Desemprego</h2>
+                    <p>É um benefício temporário concedido ao trabalhador desempregado, dispensado sem
+                        justa causa ou em decorrência de rescisão indireta.</p>
+                    <p><a class="btn btn-default" href="seguro_desemprego.php" role="button">Ver detalhes &raquo;</a></p>
                 </div>               
             </div>
         </center>   
