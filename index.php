@@ -26,7 +26,7 @@
                     <h2>Seguro Desemprego</h2>
                     <p>É um benefício temporário concedido ao trabalhador desempregado, dispensado sem
                         justa causa ou em decorrência de rescisão indireta.</p>
-                    <p><a class="btn btn-default" href="seguro_desemprego.php" role="button">Ver detalhes &raquo;</a></p>
+                    <p><a class="btn btn-default" href="desemprego.php" role="button">Ver detalhes &raquo;</a></p>
                 </div>               
             </div>
         </center>   
