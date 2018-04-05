@@ -1,4 +1,4 @@
-<?php require 'incs/inc_menu2.php'; ?>
+
 <html>
     <head>
         <title> Folha de Pagamento </title>  
@@ -357,7 +357,7 @@
     $calculo3 = number_format($calculo3, 2);
     $fgts = number_format($fgts, 2);
     ?>
-
+    
     <body>
         <div class="col-sm-11 col-sm-offset-3 col-md-10 col-md-offset-2 main">           
             <h2 class="sub-header">Folha de pagamento <?php echo $nome ?></h2>
@@ -387,7 +387,4 @@
                 </table>
             </div>
         </div>
-    <center>
-        <a class="left center" href="folha_de_pagamento.php"><button class="btn btn-danger btn-lg " type="button"><span class="glyphicon glyphicon-hand-left"> Voltar</span></button></a>
-    </center>
-    <?php require 'incs/inc_rodape.php'; ?>
+        
