@@ -29,7 +29,7 @@
                 </label>
             </div>
             <button class="btn btn-lg btn-danger btn-block" type="submit">Entrar</button>
-            <p class="mt-5 mb-3 text-muted">&copy; Carla - 2018</p>
+            <p class="mt-5 mb-3 text-muted">&copy; Cild.a - 2018</p>
         </form>
     </body>
 </html>

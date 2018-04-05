@@ -72,7 +72,7 @@
             </form>
         </div>
         <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; Carla - 2018 </p>
+            <p class="mb-1">&copy; Cild.a - 2018 </p>
         </footer>
 
         <!-- Bootstrap core JavaScript
