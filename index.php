@@ -2,8 +2,10 @@
 <!DOCTYPE html>
 <html>
     <header>
+        <link rel="icon" href="img/iconec.png">
         <?php require 'incs/inc_menu2.php'; ?>
     </header>
+
     <div class="escopo"> 
         <center>
             <div class="row">

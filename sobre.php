@@ -6,8 +6,9 @@
         <link href="dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <link href="css/cover.css" rel="stylesheet">
+        <link rel="icon" href="img/iconec.png">
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
-            <link href="css/dashboard.css" rel="stylesheet">
+        <link href="css/dashboard.css" rel="stylesheet">
 
 
     </head>
