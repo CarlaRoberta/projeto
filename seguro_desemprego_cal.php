@@ -445,4 +445,8 @@ require 'incs/inc_menu2.php';
     }
     ?>
 
+    <?php
+    require 'incs/inc_rodape.php';
+    ?>
+
 </div>
