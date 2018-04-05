@@ -8,19 +8,20 @@ require 'incs/inc_menu2.php';
 <div class="container">
 
     <?php
-    require 'conexao.php';
+    error_reporting(0);
+    //require 'conexao.php';
 
-    $id = $_GET["id"];
-    $sql = "select * from funcionarios WHERE funcionarios.FU_ID = $id";
-    $result = mysqli_query($con, $sql);
-    $dados = mysqli_fetch_assoc($result);
-    $id_funcionarios = $dados ['FU_ID'];
-    $nome = $dados ['FU_NAME'];
-    $valor_salario = $dados['FU_SALARIO'];
+    //$id = $_GET["id"];
+    //$sql = "select * from funcionarios WHERE funcionarios.FU_ID = $id";
+    //$result = mysqli_query($con, $sql);
+    //$dados = mysqli_fetch_assoc($result);
+    //$id_funcionarios = $dados ['FU_ID'];
+    //$nome = $dados ['FU_NAME'];
+    //$valor_salario = $dados['FU_SALARIO'];
     ?>
 
     <div class="py-5 text-center">
-        <h1> Cálculo de Seguro Desemprego do(a) <?php echo $nome; ?> </h1>
+        <h1> Resultado de Seguro Desemprego </h1>
     </div>
 
     <?php
