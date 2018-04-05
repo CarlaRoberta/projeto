@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
          <link rel="icon" href="img/iconec.png">
-        <title>Loga aí</title>
+        <title>Login</title>
 
         <!-- Bootstrap core CSS -->
 <!--        <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
