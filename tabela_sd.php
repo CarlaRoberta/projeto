@@ -33,7 +33,7 @@ require 'incs/inc_menu2.php';
                 </tr>
                 <tr>
                     <th scope="row">Superior a R$ 2.268,05</th>
-                    <td>O valor da parcela será R$ 1.542,24 invariavelmente.</td>
+                    <td>O valor da parcela será R$ 1.542,24 invariavelmente</td>
                 </tr>
             </tbody>
         </table>
@@ -61,7 +61,7 @@ require 'incs/inc_menu2.php';
                 </tr>
                 <tr>
                     <th scope="row">Superior a R$ 2.417,29</th>
-                    <td>O valor da parcela será R$ 1.643,72 invariavelmente.</td>
+                    <td>O valor da parcela será R$ 1.643,72 invariavelmente</td>
                 </tr>
             </tbody>
         </table>

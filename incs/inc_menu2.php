@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="img/icone.jpg">
+        <link rel="icon" href="img/iconec.png">
         <title>Projeto</title>
         <link href="css/css.css" rel="stylesheet" type="text/css"/>
         <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>  
@@ -44,10 +44,6 @@
                                         <li><a href="folha_de_pagamento.php">Folha de Pagamento</a></li>
                                         <li><a href="recisao.php">Cálculo de Rescisão</a></li>
                                         <li><a href="seguro_desemprego.php">Seguro Desemprego</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li class="dropdown-header">Outros</li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li><a href="#">One more separated link</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">

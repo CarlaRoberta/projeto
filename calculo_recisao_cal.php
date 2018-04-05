@@ -110,7 +110,7 @@ if ($ta == "w") {
             </div>
         </div>
     <center>
-        <a class="left center" href="calculo_recisao.php"><button class="btn btn-danger btn-lg " type="button"><span class="glyphicon glyphicon-hand-left"> Voltar</span></button></a>
+        <a class="left center" href="calculo_recisao.php"><button class="btn btn-primary btn-lg " type="button"><span class="glyphicon glyphicon-hand-left"> Voltar</span></button></a>
     </center>
     <?php
 } else {

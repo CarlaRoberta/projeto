@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="img/icone.jpg">
+        <link rel="icon" href="img/iconec.png">
         <title>Cadastro de Funcionários</title>
 
         <!-- Bootstrap core CSS -->
@@ -83,7 +83,7 @@
                 </div>
                 <center>
                     <hr class="mb-3">
-                    <button class="btn btn-danger btn-lg " type="submit">Cadastrar</button>
+                    <button class="btn btn-primary btn-lg " type="submit">Cadastrar</button>
                 </center>
             </form>
         </div>

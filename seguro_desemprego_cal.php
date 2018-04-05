@@ -8,19 +8,20 @@ require 'incs/inc_menu2.php';
 <div class="container">
 
     <?php
-    require 'conexao.php';
+    error_reporting(0);
+    //require 'conexao.php';
 
-    $id = $_GET["id"];
-    $sql = "select * from funcionarios WHERE funcionarios.FU_ID = $id";
-    $result = mysqli_query($con, $sql);
-    $dados = mysqli_fetch_assoc($result);
-    $id_funcionarios = $dados ['FU_ID'];
-    $nome = $dados ['FU_NAME'];
-    $valor_salario = $dados['FU_SALARIO'];
+    //$id = $_GET["id"];
+    //$sql = "select * from funcionarios WHERE funcionarios.FU_ID = $id";
+    //$result = mysqli_query($con, $sql);
+    //$dados = mysqli_fetch_assoc($result);
+    //$id_funcionarios = $dados ['FU_ID'];
+    //$nome = $dados ['FU_NAME'];
+    //$valor_salario = $dados['FU_SALARIO'];
     ?>
 
     <div class="py-5 text-center">
-        <h1> Cálculo de Seguro Desemprego do(a) <?php echo $nome; ?> </h1>
+        <h1> Resultado de Seguro Desemprego </h1>
     </div>
 
     <?php
@@ -54,7 +55,6 @@ require 'incs/inc_menu2.php';
 
 
 
-
 //Cálculo 1
     $cal1 = $as + $ps + $us;
     $cal2 = $cal1 / 3;
@@ -64,16 +64,19 @@ require 'incs/inc_menu2.php';
         if ($mt >= 18 and $mt <= 23) {
             if ($cal2 <= $valor1) {
                 $cal3 = $cal2 * ($p1 / 100) * 100;
-                //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
-                //echo 'O número de parcelas: 4';
-                //echo 'O valor da parcela será' . $cal3 . '<br>';
-                ?>
+                if ($cal3 < 954) {
+                    $cal3 = 954;
+                    //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+                    //echo 'O número de parcelas: 4';
+                    //echo 'O valor da parcela será' . $cal3 . '<br>';
+                    ?>
 
-                <div class="py-5 text-center">
-                    <h3> Para este funcionário o valor da pacela será de R$ <?php $cal3 ?> e será divido em 4 parcelas. </h3>
-                </div>
+                    <div class="py-5 text-center">
+                        <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal3; ?> e será divido em 4 parcelas. </h3>
+                    </div>
 
-                <?php
+                    <?php
+                }
             }
 
             if ($cal2 >= $valor1 and $cal2 <= $valor2) {
@@ -84,7 +87,7 @@ require 'incs/inc_menu2.php';
                 ?>
 
                 <div class="py-5 text-center">
-                    <h3> Para este funcionário o valor da pacela será de R$ <?php $cal3 ?> e será divido em 4 parcelas. </h3>
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal4 ?> e será divido em 4 parcelas. </h3>
                 </div>
 
                 <?php
@@ -96,209 +99,355 @@ require 'incs/inc_menu2.php';
                 ?>
 
                 <div class="py-5 text-center">
-                    <h3> Para este funcionário o valor da pacela será de R$ <?php $cal3 ?> e será divido em 4 parcelas. </h3>
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $valorFixo ?> e será divido em 4 parcelas. </h3>
                 </div>
 
-            <?php
+                <?php
+            }
         }
     }
-}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //SEGUNDA CONDIÇÃO DA TABELA - PARA A PRIMEIRA SOLICITAÇÃO
-if ($ad == 'um') {
-    if ($mt >= 24) {
-        if ($cal2 <= $valor1) {
-            $cal3 = $cal2 * ($p1 / 100) * 100;
-            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
-            //echo 'O número de parcelas: 5';
-            //echo 'O valor da parcela será' . $cal3 . '<br>';
-            ?>
+    if ($ad == 'um') {
+        if ($mt >= 24) {
+            if ($cal2 <= $valor1) {
+                $cal3 = $cal2 * ($p1 / 100) * 100;
+                if ($cal3 < 954) {
+                    $cal3 = 954;
+                    //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+                    //echo 'O número de parcelas: 5';
+                    //echo 'O valor da parcela será' . $cal3 . '<br>';
+                    ?>
+
+                    <div class="py-5 text-center">
+                        <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal3 ?> e será divido em 5 parcelas. </h3>
+                    </div>
+
+                    <?php
+                }
+            }
+
+            if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+                $cal3 = $cal2 * ($p2 / 100) * 100;
+                $cal4 = $cal3 + 1088.56;
+                //echo 'O número de parcelas: 5';
+                //echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+                ?>
 
                 <div class="py-5 text-center">
-                    <h3> Para este funcionário o valor da pacela será de R$ <?php $cal3 ?> e será divido em 5 parcelas. </h3>
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal4 ?> e será divido em 5 parcelas. </h3>
                 </div>
 
-            <?php
-        }
+                <?php
+            }
 
-        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
-            $cal3 = $cal2 * ($p2 / 100) * 100;
-            $cal4 = $cal3 + 1088.56;
-            //echo 'O número de parcelas: 5';
-            //echo (double) 'O valor da parcela será' . $cal4 . '<br>';
-            ?>
+            if ($cal2 > $valor3) {
+                //echo 'O número de parcelas: 5';
+                //echo 'O valor da parcela será' . $valorFixo . '<br>';
+                ?>
 
                 <div class="py-5 text-center">
-                    <h3> Para este funcionário o valor da pacela será de R$ <?php $cal3 ?> e será divido em 5 parcelas. </h3>
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $valorFixo ?> e será divido em 5 parcelas. </h3>
                 </div>
 
-            <?php
-        }
-
-        if ($cal2 > $valor3) {
-            //echo 'O número de parcelas: 5';
-            //echo 'O valor da parcela será' . $valorFixo . '<br>';
-            ?>
-
-                <div class="py-5 text-center">
-                    <h3> Para este funcionário o valor da pacela será de R$ <?php $cal3 ?> e será divido em 5 parcelas. </h3>
-                </div>
-
-            <?php
+                <?php
+            }
         }
     }
-}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //PRIMEIRA CONDIÇÃO DA TABELA - PARA A SEGUNDA SOLICITAÇÃO
-if ($ad == 'dois') {
-    if ($mt == 9 and $mt <= 11) {
-        if ($cal2 <= $valor1) {
-            $cal3 = $cal2 * ($p1 / 100) * 100;
-            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
-            echo 'O número de parcelas: 3';
-            echo 'O valor da parcela será' . $cal3 . '<br>';
-        }
+    if ($ad == 'dois') {
+        if ($mt == 9 and $mt <= 11) {
+            if ($cal2 <= $valor1) {
+                $cal3 = $cal2 * ($p1 / 100) * 100;
+                if ($cal3 < 954) {
+                    $cal3 = 954;
 
-        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
-            $cal3 = $cal2 * ($p2 / 100) * 100;
-            $cal4 = $cal3 + 1088.56;
-            echo 'O número de parcelas: 3';
-            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
-        }
+                    //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+                    //echo 'O número de parcelas: 3';
+                    //echo 'O valor da parcela será' . $cal3 . '<br>';
+                    ?>
 
-        if ($cal2 > $valor3) {
-            echo 'O número de parcelas: 3';
-            echo 'O valor da parcela será' . $valorFixo . '<br>';
-        }
-    }
-}
+                    <div class="py-5 text-center">
+                        <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal3 ?> e será divido em 3 parcelas. </h3>
+                    </div>
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    <?php
+                }
+            }
 
-if ($ad == 'dois') {
-    if ($mt == 12 and $mt <= 23) {
-        if ($cal2 <= $valor1) {
-            $cal3 = $cal2 * ($p1 / 100) * 100;
-            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
-            echo 'O número de parcelas: 4';
-            echo 'O valor da parcela será' . $cal3 . '<br>';
-        }
+            if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+                $cal3 = $cal2 * ($p2 / 100) * 100;
+                $cal4 = $cal3 + 1088.56;
+                //echo 'O número de parcelas: 3';
+                //echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+                ?>
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal4 ?> e será divido em 3 parcelas. </h3>
+                </div>
 
-        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
-            $cal3 = $cal2 * ($p2 / 100) * 100;
-            $cal4 = $cal3 + 1088.56;
-            echo 'O número de parcelas: 4';
-            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
-        }
+                <?php
+            }
 
-        if ($cal2 > $valor3) {
-            echo 'O número de parcelas: 4';
-            echo 'O valor da parcela será' . $valorFixo . '<br>';
+            if ($cal2 > $valor3) {
+                //echo 'O número de parcelas: 3';
+                //echo 'O valor da parcela será' . $valorFixo . '<br>';
+                ?>
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $valorFixo ?> e será divido em 3 parcelas. </h3>
+                </div>
+                <?php
+            }
         }
     }
-}
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-if ($ad == 'dois') {
-    if ($mt >= 24) {
-        if ($cal2 <= $valor1) {
-            $cal3 = $cal2 * ($p1 / 100) * 100;
-            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
-            echo 'O número de parcelas: 5';
-            echo 'O valor da parcela será' . $cal3 . '<br>';
-        }
+    if ($ad == 'dois') {
+        if ($mt == 12 and $mt <= 23) {
+            if ($cal2 <= $valor1) {
+                $cal3 = $cal2 * ($p1 / 100) * 100;
+                if ($cal3 < 954) {
+                    $cal3 = 954;
+                    //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+                    //echo 'O número de parcelas: 4';
+                    //echo 'O valor da parcela será' . $cal3 . '<br>';
+                    ?>
+                    <div class="py-5 text-center">
+                        <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal3 ?> e será divido em 4 parcelas. </h3>
+                    </div>
 
-        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
-            $cal3 = $cal2 * ($p2 / 100) * 100;
-            $cal4 = $cal3 + 1088.56;
-            echo 'O número de parcelas: 5';
-            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
-        }
+                    <?php
+                }
+            }
 
-        if ($cal2 > $valor3) {
-            echo 'O número de parcelas: 5';
-            echo 'O valor da parcela será' . $valorFixo . '<br>';
-        }
-    }
-}
+            if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+                $cal3 = $cal2 * ($p2 / 100) * 100;
+                $cal4 = $cal3 + 1088.56;
+                //echo 'O número de parcelas: 4';
+                //echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+                ?>
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//PRIMEIRA CONDIÇÃO DA TABELA - PARA A TERCEIRA SOLICITAÇÃO
-if ($ad == 'tres') {
-    if ($mt == 6 and $mt <= 11) {
-        if ($cal2 <= $valor1) {
-            $cal3 = $cal2 * ($p1 / 100) * 100;
-            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
-            echo 'O número de parcelas: 3';
-            echo 'O valor da parcela será' . $cal3 . '<br>';
-        }
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal4 ?> e será divido em 4 parcelas. </h3>
+                </div>
 
-        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
-            $cal3 = $cal2 * ($p2 / 100) * 100;
-            $cal4 = $cal3 + 1088.56;
-            echo 'O número de parcelas: 3';
-            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
-        }
+                <?php
+            }
 
-        if ($cal2 > $valor3) {
-            echo 'O número de parcelas: 3';
-            echo 'O valor da parcela será' . $valorFixo . '<br>';
+            if ($cal2 > $valor3) {
+                //echo 'O número de parcelas: 4';
+                //echo 'O valor da parcela será' . $valorFixo . '<br>';
+                ?>
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $valorFixo ?> e será divido em 4 parcelas. </h3>
+                </div>
+
+                <?php
+            }
         }
     }
-}
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-if ($ad == 'dois') {
-    if ($mt == 12 and $mt <= 23) {
-        if ($cal2 <= $valor1) {
-            $cal3 = $cal2 * ($p1 / 100) * 100;
-            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
-            echo 'O número de parcelas: 4';
-            echo 'O valor da parcela será' . $cal3 . '<br>';
-        }
+    if ($ad == 'dois') {
+        if ($mt >= 24) {
+            if ($cal2 <= $valor1) {
+                $cal3 = $cal2 * ($p1 / 100) * 100;
+                if ($cal3 < 954) {
+                    $cal3 = 954;
+                    //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+                    //echo 'O número de parcelas: 5';
+                    //echo 'O valor da parcela será' . $cal3 . '<br>';
+                    ?>
+                    <div class="py-5 text-center">
+                        <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal3 ?> e será divido em 5 parcelas. </h3>
+                    </div>
 
-        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
-            $cal3 = $cal2 * ($p2 / 100) * 100;
-            $cal4 = $cal3 + 1088.56;
-            echo 'O número de parcelas: 4';
-            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
-        }
+                    <?php
+                }
+            }
 
-        if ($cal2 > $valor3) {
-            echo 'O número de parcelas: 4';
-            echo 'O valor da parcela será' . $valorFixo . '<br>';
-        }
-    }
-}
+            if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+                $cal3 = $cal2 * ($p2 / 100) * 100;
+                $cal4 = $cal3 + 1088.56;
+                //echo 'O número de parcelas: 5';
+                //echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+                ?>
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal4 ?> e será divido em 5 parcelas. </h3>
+                </div>
 
-if ($ad == 'dois') {
-    if ($mt >= 24) {
-        if ($cal2 <= $valor1) {
-            $cal3 = $cal2 * ($p1 / 100) * 100;
-            //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
-            echo 'O número de parcelas: 5';
-            echo 'O valor da parcela será' . $cal3 . '<br>';
-        }
+                <?php
+            }
 
-        if ($cal2 >= $valor1 and $cal2 <= $valor2) {
-            $cal3 = $cal2 * ($p2 / 100) * 100;
-            $cal4 = $cal3 + 1088.56;
-            echo 'O número de parcelas: 5';
-            echo (double) 'O valor da parcela será' . $cal4 . '<br>';
-        }
+            if ($cal2 > $valor3) {
+                //echo 'O número de parcelas: 5';
+                //echo 'O valor da parcela será' . $valorFixo . '<br>';
+                ?>
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $valorFixo ?> e será divido em 5 parcelas. </h3>
+                </div>
 
-        if ($cal2 > $valor3) {
-            echo 'O número de parcelas: 5';
-            echo 'O valor da parcela será' . $valorFixo . '<br>';
+                <?php
+            }
         }
     }
-}
-?>
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //PRIMEIRA CONDIÇÃO DA TABELA - PARA A TERCEIRA SOLICITAÇÃO
+    if ($ad == 'tres') {
+        if ($mt == 6 and $mt <= 11) {
+            if ($cal2 <= $valor1) {
+                $cal3 = $cal2 * ($p1 / 100) * 100;
+                if ($cal3 < 954) {
+                    $cal3 = 954;
+                    //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+                    //echo 'O número de parcelas: 3';
+                    //echo 'O valor da parcela será' . $cal3 . '<br>';
+                    ?>
+
+                    <div class="py-5 text-center">
+                        <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal3 ?> e será divido em 3 parcelas. </h3>
+                    </div>
+
+                    <?php
+                }
+            }
+
+            if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+                $cal3 = $cal2 * ($p2 / 100) * 100;
+                $cal4 = $cal3 + 1088.56;
+                //echo 'O número de parcelas: 3';
+                //echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+                ?>
+
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal4 ?> e será divido em 3 parcelas. </h3>
+                </div>
+
+                <?php
+            }
+
+            if ($cal2 > $valor3) {
+                //echo 'O número de parcelas: 3';
+                //echo 'O valor da parcela será' . $valorFixo . '<br>';
+                ?>
+
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $valorFixo ?> e será divido em 3 parcelas. </h3>
+                </div>
+
+                <?php
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if ($ad == 'tres') {
+        if ($mt == 12 and $mt <= 23) {
+            if ($cal2 <= $valor1) {
+                $cal3 = $cal2 * ($p1 / 100) * 100;
+                if ($cal3 < 954) {
+                    $cal3 = 954;
+
+                    //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+                    //echo 'O número de parcelas: 4';
+                    //echo 'O valor da parcela será' . $cal3 . '<br>';
+                    ?>
+
+                    <div class="py-5 text-center">
+                        <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal3 ?> e será divido em 4 parcelas. </h3>
+                    </div>
+
+                    <?php
+                }
+            }
+
+            if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+                $cal3 = $cal2 * ($p2 / 100) * 100;
+                $cal4 = $cal3 + 1088.56;
+                //echo 'O número de parcelas: 4';
+                //echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+                ?>
+
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal4 ?> e será divido em 4 parcelas. </h3>
+                </div>
+
+                <?php
+            }
+
+            if ($cal2 > $valor3) {
+                //echo 'O número de parcelas: 4';
+                //echo 'O valor da parcela será' . $valorFixo . '<br>';
+                ?>
+
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $valorFixo ?> e será divido em 4 parcelas. </h3>
+                </div>
+
+                <?php
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if ($ad == 'tres') {
+        if ($mt >= 24) {
+            if ($cal2 <= $valor1) {
+                $cal3 = $cal2 * ($p1 / 100) * 100;
+                if ($cal3 < 954) {
+                    $cal3 = 954;
+                    //SE MENOR QUE O SALÁRIO MINÍMO, DEVE RECEBER O SALÁRIO MINÍMO
+                    //echo 'O número de parcelas: 5';
+                    //echo 'O valor da parcela será' . $cal3 . '<br>';
+                    ?>
+
+                    <div class="py-5 text-center">
+                        <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal3 ?> e será divido em 5 parcelas. </h3>
+                    </div>
+
+                    <?php
+                }
+            }
+
+            if ($cal2 >= $valor1 and $cal2 <= $valor2) {
+                $cal3 = $cal2 * ($p2 / 100) * 100;
+                $cal4 = $cal3 + 1088.56;
+                //echo 'O número de parcelas: 5';
+                //echo (double) 'O valor da parcela será' . $cal4 . '<br>';
+                ?>
+
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $cal4 ?> e será divido em 5 parcelas. </h3>
+                </div>
+
+                <?php
+            }
+
+            if ($cal2 > $valor3) {
+                //echo 'O número de parcelas: 5';
+                //echo 'O valor da parcela será' . $valorFixo . '<br>';
+                ?>
+
+                <div class="py-5 text-center">
+                    <h3> Para este funcionário o valor da pacela será de R$ <?php echo $valorFixo ?> e será divido em 5 parcelas. </h3>
+                </div>
+
+                <?php
+            }
+        }
+    }
+    ?>
+
+    <?php
+    require 'incs/inc_rodape.php';
+    ?>
 
 </div>
