@@ -19,7 +19,7 @@ require 'incs/inc_menu2.php';
     $valor_salario = $dados['FU_SALARIO'];
     ?>
     <div class="py-5 text-center">
-        <h1> Cálculo de Seguro Desemprego da <?php echo $nome; ?> </h1>
+        <h1> Cálculo de Seguro Desemprego do(a) <?php echo $nome; ?> </h1>
     </div>
     <form class="form" action="seguro_desemprego_cal.php" method="POST">
         <div class="col-md-8 order-md-1">
