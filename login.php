@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="img/icone.jpg">
+         <link rel="icon" href="img/iconec.png">
         <title>Loga aí</title>
 
         <!-- Bootstrap core CSS -->
@@ -28,7 +28,7 @@
                     <a style="color: palevioletred" href="cadastro.php"> Me Cadastar</a>
                 </label>
             </div>
-            <button class="btn btn-lg btn-danger btn-block" type="submit">Entrar</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
             <p class="mt-5 mb-3 text-muted">&copy; Carla - 2018</p>
         </form>
     </body>

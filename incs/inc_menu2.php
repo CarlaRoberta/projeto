@@ -44,10 +44,6 @@
                                         <li><a href="folha_de_pagamento.php">Folha de Pagamento</a></li>
                                         <li><a href="recisao.php">Cálculo de Rescisão</a></li>
                                         <li><a href="seguro_desemprego.php">Seguro Desemprego</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li class="dropdown-header">Outros</li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li><a href="#">One more separated link</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
