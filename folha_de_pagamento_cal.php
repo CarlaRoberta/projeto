@@ -1,3 +1,4 @@
+<?php require 'incs/inc_menu2.php'; ?>
 
 <html>
     <head>
@@ -387,4 +388,4 @@
                 </table>
             </div>
         </div>
-        
+          <?php require 'incs/inc_rodape.php'; ?>

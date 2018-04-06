@@ -25,7 +25,7 @@
             <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
             <div class="checkbox mb-3">
                 <label>
-                    <a style="color: palevioletred" href="cadastro.php"> Me Cadastar</a>
+                    <a style="color: palevioletred" href="cadastro.php"> Me Cadastrar</a>
                 </label>
             </div>
             <button class="btn btn-lg btn-danger btn-block" type="submit">Entrar</button>

@@ -25,7 +25,7 @@
                                     <tr>                                
                                         <td><?php echo $nome; ?></td>
                                         <td><div method="POST" action="enviar.php">
-                                                <p><a href="folha_de_pagamento.cal.php?id= <?php echo $id_funcionarios; ?>" class=" btn btn-sm btn-primary">Folha de Pagamento</a></p>
+                                                <p><a href="folha_de_pagamento_cal.php?id= <?php echo $id_funcionarios; ?>" class=" btn btn-sm btn-primary">Folha de Pagamento</a></p>
                                             </div></td>
                                     </tr>
                                     <?php
