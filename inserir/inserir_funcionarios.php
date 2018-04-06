@@ -17,8 +17,8 @@ if ($result == true) {
     header("Location: ../funcionarios.php");
 } else {
     if (!mysqli_query($con, $sql)) {
-        $erro = mysqli_error($con);
-        echo "Ocorreu o seguinte erro: ", '"', $erro, '"';
+            require '../Paginaerro.php';
+
     }
 }
 ?>

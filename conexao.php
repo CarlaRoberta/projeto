@@ -8,9 +8,10 @@ $pass = "";
 $bancodedados = "projeto";
 
 $con = mysqli_connect($hostname, $user, $pass, $bancodedados);
-//if (!$con) {
-  //  exit("Erro ao conectar ao Banco de Dados");
-//} 
+if (!$con) {
+        require '../Paginaerro.php';
+
+} 
 //else {
 //    if ($con == true) {
 //        echo 'sucesso';
