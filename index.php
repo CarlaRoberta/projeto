@@ -1,4 +1,8 @@
+<?phpsession_start();
 
+if (empty($_SESSION['admin'])) {
+    return header('location: login.php');
+}else{?>
 <!DOCTYPE html>
 <html>
     <header>
@@ -35,4 +39,5 @@
     </div>
     <?php
     require 'incs/inc_rodape.php';
-    ?>
+   
+?>
