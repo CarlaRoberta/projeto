@@ -5,6 +5,8 @@ if (!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE) {
     return header('location: login.php');
 //    echo 'não foi'.$email_usu;
 }
+var_dump($_SESSION);
+
 ?>
 <!DOCTYPE html>
 <html>
