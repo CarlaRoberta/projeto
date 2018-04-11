@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="pt">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +16,7 @@ session_start();
         <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <script src="assets/js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
         <script src="assets/js/ie-emulation-modes-warning.js" type="text/javascript"></script>
-        <link href="carousel.css" rel="stylesheet">
     </head>
-    <!-- NAVBAR
-    ================================================== -->
     <body>
         <div class="navbar-wrapper">
             <div class="container">
@@ -81,7 +78,6 @@ session_start();
             <ol class="carousel-indicators">
                 <li data-target="#" data-slide-to="0" class="active"></li>
                 <li data-target="#" data-slide-to="1"></li>
-                <li data-target="#" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
@@ -91,19 +87,7 @@ session_start();
                             <a href="login.php"><button class="left btn "><span  class="glyphicon glyphicon-user" ></span></button></a>
                             <h1>Saiba sobre o Projeto Cild.a</h1>
                             <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
-                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires e Carla Roberta</p>
-                            <p><a class="btn btn-lg btn-primary" href="sobre.php" role="button">Saiba mais</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img class="second-slide" src="img/slide/cal.jpg" alt="Second slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <a href="login.php"><button class="left btn "><span  class="glyphicon glyphicon-user" ></span></button></a>
-                            <h1>Saiba sobre o Projeto Cild.a</h1>
-                            <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
-                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires e Carla Roberta</p>
+                                Anna Ellen, Isabella Moretti, Luana Neves e Carla Roberta</p>
                             <p><a class="btn btn-lg btn-primary" href="sobre.php" role="button">Saiba mais</a></p>
                         </div>
                     </div>
@@ -115,7 +99,7 @@ session_start();
                             <a href="login.php"><button class="left btn "><span  class="glyphicon glyphicon-user" ></span></button></a>
                             <h1>Saiba sobre o Projeto Cild.a</h1>
                             <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
-                                Anna Ellen, Isabella Moretti, Luana Neves, Daniela Ramires e Carla Roberta</p>
+                                Anna Ellen, Isabella Moretti, Luana Neves e Carla Roberta</p>
                             <p><a class="btn btn-lg btn-primary" href="sobre.php" role="button">Saiba mais</a></p>
                         </div>
                     </div>

@@ -25,11 +25,11 @@
             <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
             <div class="checkbox mb-3">
                 <label>
-                    <a style="color: palevioletred" href="cadastro.php"> Me Cadastar</a>
+                    <a style="color: palevioletred" href="cadastro.php"> Me Cadastrar</a>
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-            <p class="mt-5 mb-3 text-muted">&copy; Carla - 2018</p>
+            <button class="btn btn-lg btn-danger btn-block" type="submit">Entrar</button>
+            <p class="mt-5 mb-3 text-muted">&copy; Cild.a - 2018</p>
         </form>
     </body>
 </html>

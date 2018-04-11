@@ -35,6 +35,15 @@
                             </div>                           
                         </div>
                         <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="cargo"> Cargo</label>
+                                <input type="text"  class="form-control" name="cargo" id="cargo" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    OU FAZ CERTO.
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="insalubridade">Porcentagem da Insalubridade</label><br>
                                 <label class="radio-inline"><input type="radio" name="insalubridade" value="10">10<br></label>

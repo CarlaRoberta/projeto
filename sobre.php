@@ -33,7 +33,7 @@
                     <div class="inner cover">
                         <h1 class="cover-heading"> Cild.a</h1>
                         <p class="lead">Cild.a é o nome escolhido pelo grupo composto por Carla Roberta, Isabella Moretti,
-                            Luana Neves, Daniela Ramires e Anna Ellen. <br>
+                            Luana Neves e Anna Ellen. <br>
                             O objetivo do grupo é criar um software capaz de fazer a contabilidade das empresas.</p>
                         <p class="lead">
                             <a href="index.php" class="btn btn-lg btn-default">Voltar a Pagina Principal</a>
