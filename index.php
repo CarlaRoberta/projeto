@@ -1,8 +1,9 @@
 <?php
 error_reporting(0);
 session_start();
-if (isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == TRUE) {
+if (!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE) {
     return header('location: login.php');
+//    echo 'não foi'.$email_usu;
 }
 ?>
 <!DOCTYPE html>

@@ -1,9 +1,13 @@
 <?php
 error_reporting(0);
 session_start();
-if (isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == TRUE) {
+if (!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE) {
     return header('location: login.php');
 }
+//elseif(!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE){
+//    $nome = $_SESSION ['USU_EMAIL'];
+//    var_dump($nome);
+//    var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <head>
@@ -61,4 +65,4 @@ if (isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == TRUE) {
     </div>
 </div>
 
-<?php require 'incs/inc_rodape.php'; ?>
+<?php require 'incs/inc_rodape.php';?>
