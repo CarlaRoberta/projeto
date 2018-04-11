@@ -40,7 +40,10 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="folha_de_pagamento.php">Folha de Pagamento</a></li>
                                         <li><a href="recisao.php">Cálculo de Rescisão</a></li>
-                                        <li><a href="seguro_desemprego.php">Seguro Desemprego</a></li>
+                                        <li><a href="seguro_desemprego1.php">Seguro Desemprego</a></li>
+                                        <li>__________________________________</li>
+                                        <li><a href="piscofins.php">Calculo do PIS e COFINS</a></li>
+                                        <li><a href="calculosimples.php">Calculo Simples nacional</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -49,6 +52,7 @@
                                         <li><a href="tabela_inss.php">Tabelas INSS</a></li>
                                         <li><a href="tabela_irrf.php">Tabelas IRRF</a></li>
                                         <li><a href="tabela_sd.php">Tabelas Seguro Desemprego</a></li>
+                                        <li><a href="tabela_simplesnacional.php">Tabelas Simples Nacionais</a></li>
                                     </ul>
                                 </li>
                             </ul>
