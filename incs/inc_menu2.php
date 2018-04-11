@@ -101,7 +101,7 @@ session_start();
                     <div class="container">
                         <div class="carousel-caption">
                             <a href="login.php"><button class="left btn "><span  class="glyphicon glyphicon-user" ></span></button></a>
-                            <p style="color: white"><?php echo ($_SESSION['USU_EMAIL']);?></p>
+                            <p style="color: white"><?php echo ($_SESSION['USU_EMAIL']);?><a style="color: white" href="sair.php"> Sair</a></p>
                             <h1>Saiba sobre o Projeto Cild.a</h1>
                             <p>O projeto Cild.a surgiu em 2018 do curso de Auxiliar de serviços contábeis. Os seus criadores são
                                 Anna Ellen, Isabella Moretti, Luana Neves e Carla Roberta</p>
