@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="pt">
     <head>
@@ -28,7 +30,16 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Cild.a</a>
+                            <a class="navbar-brand" href="#">Cild.a
+                                <?php
+                                //session_start();
+                                //$valor = isset($_SESSION['id']) ? 'S' : 'N';
+                                //if ($valor == 'S') {
+                                //$id_cadastro_usuario = $_SESSION['id'];
+                                //echo "<a style=\"font-size: 16px; color:#A9A9A9; margin-left:200px;margin-botom:20px;\"> Bem vindo " . $_SESSION['email'];
+                                //}
+                                ?>
+                            </a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">

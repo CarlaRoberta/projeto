@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['email']) || $_SESSION['email'] == false) {
+    return header('location: index.php');
+}
 require 'incs/inc_menu2.php';
 ?>
 <head>

@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['email']) || $_SESSION['email'] == false) {
+    return header('location: login.php');
+}
 require 'incs/inc_menu2.php';
 ?>
 <head>
@@ -20,7 +24,7 @@ require 'incs/inc_menu2.php';
     <div class="py-5 text-center">
         <h1 style="color: black;"> Cálculo de Recisão da <?php echo $nome; ?> </h1>
     </div>
-    <form class="form" action="calculo_recisao_cal.php?salario=<?php echo $valor_salario;?>" method="POST"  novalidate>           
+    <form class="form" action="calculo_recisao_cal.php?salario=<?php echo $valor_salario; ?>" method="POST"  novalidate>           
         <div class="row">
             <div class="col-md-5 mb-3">
                 <label style="font-size: 140%" for="salario"> Salário </label>
