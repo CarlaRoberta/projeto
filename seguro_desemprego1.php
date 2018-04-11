@@ -4,12 +4,6 @@ session_start();
 if (!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE) {
     return header('location: login.php');
 }
-?>
-<?php
-session_start();
-if (!isset($_SESSION['email']) || $_SESSION['email'] == false) {
-    return header('location: index.php');
-}
 require 'incs/inc_menu2.php';
 ?>
 <html>

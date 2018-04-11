@@ -3,9 +3,8 @@ error_reporting(0);
 session_start();
 if (!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE) {
     return header('location: login.php');
-    require 'incs/inc_menu2.php';
-
 }
+require 'incs/inc_menu2.php';
 ?>
 <head>
     <title> Folha de Pagamento </title>  
