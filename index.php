@@ -5,14 +5,13 @@ if (!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE) {
     return header('location: login.php');
 //    echo 'não foi'.$email_usu;
 }
-var_dump($_SESSION);
-
+require 'incs/inc_menu2.php'; 
 ?>
+
 <!DOCTYPE html>
 <html>
     <header>
         <link rel="icon" href="img/iconec.png">
-        <?php require 'incs/inc_menu2.php'; ?>
     </header>
 
     <div class="escopo"> 

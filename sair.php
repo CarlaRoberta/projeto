@@ -20,8 +20,8 @@ and open the template in the editor.
                 session_destroy();
 
                 //Remove os valores que foram gravados 
-                unset($_SESSION['email_cliente'], $_SESSION['senha_cliente']);
-                header("Location: login.php");
+                unset($_SESSION['USU_EMAIL'], $_SESSION['USU_EMAIL']);
+                header("Location: index.php");
                 ?>
 
             </div>
