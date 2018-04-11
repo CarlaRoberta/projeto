@@ -43,7 +43,7 @@
         } else {
             if ($rb >= $V1 and $rb <= $V2) {
                 $n1 = $rb * $F2;
-                $n2 = $n1 - 5940; 
+                $n2 = $n1 - 5940;
                 $n3 = $n2 / $rb;
 //                var_dump($n3);
                 $resultsimplesapagar = $fm * $n3;
@@ -55,7 +55,7 @@
             } else {
                 if ($rb >= $V2 and $rb <= $V3) {
                     $n1 = $rb * $F3;
-                    $n2 = $n1 - 13860; 
+                    $n2 = $n1 - 13860;
                     $n3 = $n2 / $rb;
                     $resultsimplesapagar = $fm * $n3;
                     $resul = number_format($resultsimplesapagar, 2);
@@ -63,7 +63,7 @@
                 } else {
                     if ($rb >= $V3 and $rb <= $V4) {
                         $n1 = $rb * $F4;
-                        $n2 = $n1 - 22500; 
+                        $n2 = $n1 - 22500;
                         $n3 = $n2 / $rb;
                         $resultsimplesapagar = $fm * $n3;
                         $resul = number_format($resultsimplesapagar, 2);
@@ -112,7 +112,7 @@
         } else {
             if ($rb >= $V1 and $rb <= $V2) {
                 $n1 = $rb * $F2;
-                $n2 = $n1 - 5940; 
+                $n2 = $n1 - 5940;
                 $n3 = $n2 / $rb;
 //                var_dump($n3);
                 $resultsimplesapagar = $fm * $n3;
@@ -124,7 +124,7 @@
             } else {
                 if ($rb >= $V2 and $rb <= $V3) {
                     $n1 = $rb * $F3;
-                    $n2 = $n1 - 13860; 
+                    $n2 = $n1 - 13860;
                     $n3 = $n2 / $rb;
                     $resultsimplesapagar = $fm * $n3;
                     $resul = number_format($resultsimplesapagar, 2);
@@ -132,7 +132,7 @@
                 } else {
                     if ($rb >= $V3 and $rb <= $V4) {
                         $n1 = $rb * $F4;
-                        $n2 = $n1 - 22500; 
+                        $n2 = $n1 - 22500;
                         $n3 = $n2 / $rb;
                         $resultsimplesapagar = $fm * $n3;
                         $resul = number_format($resultsimplesapagar, 2);

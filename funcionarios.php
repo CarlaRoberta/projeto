@@ -1,3 +1,10 @@
+<?php
+error_reporting(0);
+session_start();
+if (isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == TRUE) {
+    return header('location: login.php');
+}
+?>
 <!DOCTYPE html>
 <head>
     <?php require 'incs/inc_menu2.php'; ?>

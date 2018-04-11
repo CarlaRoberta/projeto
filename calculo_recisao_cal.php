@@ -70,7 +70,6 @@ if ($ta == "q") {
 
 //Tem que ver quando esse valor pode ser diferente
 //        echo 'Férias Proporcionais:' . $dt1 . '<br>';
-
 //1/3 de Férias Proporcionais
         $ferias = $dt / 3;
         $total3 = $total2 + $ferias;
