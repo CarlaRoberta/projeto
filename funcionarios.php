@@ -31,6 +31,7 @@ if (!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE) {
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
+                            <th>Cargo</th>
                             <th>Dependentes</th>
                             <th>Insalubridade</th>
                             <th>Periculosidade</th>
@@ -42,6 +43,7 @@ if (!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE) {
                         while ($dados = mysqli_fetch_assoc($result)) {
                             $id_funcionarios = $dados ['FU_ID'];
                             $nome = $dados ['FU_NAME'];
+                            $cargo = $dados ['FU_CARGO'];
                             $insalubridade = $dados ['FU_ISA'];
                             $periculosidade = $dados ['FU_PERI'];
                             $dependentes = $dados ['FU_DES'];
@@ -50,6 +52,7 @@ if (!isset($_SESSION['USU_EMAIL']) || $_SESSION['USU_EMAIL'] == FALSE) {
                             <tr>
                                 <td><?php echo $id_funcionarios ?></td>
                                 <td><?php echo $nome ?></td>
+                                <td><?php echo $cargo ?></td>
                                 <td><?php echo $dependentes ?></td>
                                 <td><?php echo $insalubridade ?></td>
                                 <td><?php echo $periculosidade ?></td>
